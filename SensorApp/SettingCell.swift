@@ -15,7 +15,7 @@ class SettingCell: UITableViewCell {
     static let cellIdentifier = "SettingCell"
     @IBOutlet weak var label: UILabel!
     
-    func setDisplayName(displayName: String){
+    func setDisplayName(_ displayName: String){
         label!.text = displayName
     }
 }

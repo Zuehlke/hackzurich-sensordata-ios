@@ -15,15 +15,15 @@ import UIKit
 class MicrophoneSensor: AbstractSensor, DeviceSensor, AVAudioRecorderDelegate {
     
     
-    private var recordingSession = AVAudioSession.sharedInstance()
-    private var audioRecorder : AVAudioRecorder?
-    private var intervalTimer: NSTimer?
+    fileprivate var recordingSession = AVAudioSession.sharedInstance()
+    fileprivate var audioRecorder : AVAudioRecorder?
+    fileprivate var intervalTimer: Timer?
     
     /// A Bool that indicates that the microphone is available on the device which is the case on real hardware
     var isAvailable : Bool{
         
         get{
-            if UIDevice.currentDevice().isSimulator{
+            if UIDevice.current.isSimulator{
                 return false
             }
             return true
@@ -59,25 +59,25 @@ class MicrophoneSensor: AbstractSensor, DeviceSensor, AVAudioRecorderDelegate {
 
         clearPermission { (permissionGranted: Bool) in
             super._isReporting = true
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+            DispatchQueue.global(qos: .background).async {
                 self.recordAudio()
-            })
+            }
         }
     }
     
     //Method that configures the recording and starts the reading timer
-    private func recordAudio(){
+    fileprivate func recordAudio(){
     
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000.0,
             AVNumberOfChannelsKey: 1 as NSNumber,
-            AVEncoderAudioQualityKey: AVAudioQuality.High.rawValue
-        ]
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ] as [String : Any]
     
-        try! audioRecorder = AVAudioRecorder(URL: NSURL(string: "dev/null")!, settings: settings)
+        try! audioRecorder = AVAudioRecorder(url: URL(string: "dev/null")!, settings: settings)
         audioRecorder?.delegate = self
-        audioRecorder?.meteringEnabled = true
+        audioRecorder?.isMeteringEnabled = true
         audioRecorder?.prepareToRecord()
         
         try! recordingSession.setActive(true)
@@ -85,12 +85,11 @@ class MicrophoneSensor: AbstractSensor, DeviceSensor, AVAudioRecorderDelegate {
         audioRecorder?.record()
         audioRecorder?.updateMeters()
         
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
-            self.intervalTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(self.intervalTimerFired), userInfo: nil, repeats: true)
-            NSRunLoop.currentRunLoop().addTimer(self.intervalTimer!, forMode: NSDefaultRunLoopMode)
-            NSRunLoop.currentRunLoop().run()
-        });
+        DispatchQueue.global(qos: .background).async {
+            self.intervalTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.intervalTimerFired), userInfo: nil, repeats: true)
+            RunLoop.current.add(self.intervalTimer!, forMode: RunLoopMode.defaultRunLoopMode)
+            RunLoop.current.run()
+        }
     }
 
     /**
@@ -100,14 +99,14 @@ class MicrophoneSensor: AbstractSensor, DeviceSensor, AVAudioRecorderDelegate {
         
         guard let audioRecorder = self.audioRecorder else {return}
         audioRecorder.updateMeters()
-        let averagePower = audioRecorder.averagePowerForChannel(0)
-        let peakPower = audioRecorder.peakPowerForChannel(0)
+        let averagePower = audioRecorder.averagePower(forChannel: 0)
+        let peakPower = audioRecorder.peakPower(forChannel: 0)
         
         persistData(averagePower,peakPower: peakPower)
     }
     
     
-    private func clearPermission(successHandler: Bool -> ()){
+    fileprivate func clearPermission(_ successHandler: @escaping (Bool) -> ()){
     
         do {
             try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -124,13 +123,13 @@ class MicrophoneSensor: AbstractSensor, DeviceSensor, AVAudioRecorderDelegate {
     }
     
     ///method that writes the data from the sensor into a dictionary structur for later JSON generation
-    private func persistData(averagePower: Float, peakPower: Float){
+    fileprivate func persistData(_ averagePower: Float, peakPower: Float){
         
         var params = [String:AnyObject]()
-        params["type"] = "Microphone"
-        params["date"] = dateFormatter.stringFromDate(NSDate())
-        params["averagePower"] = averagePower
-        params["peakPower"] = peakPower
+        params["type"] = "Microphone" as AnyObject?
+        params["date"] =   dateFormatter.string(from: Date()) as AnyObject?
+        params["averagePower"] = averagePower as AnyObject?
+        params["peakPower"] = peakPower as AnyObject?
         
         fileWriter?.addLine(params)
     }

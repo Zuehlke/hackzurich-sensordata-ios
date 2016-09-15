@@ -9,7 +9,7 @@ import AVFoundation
 class SenderModel: NSObject {
 
     static let sharedInstance = SenderModel()
-    private var senderStore = [DeviceSender]()
+    fileprivate var senderStore = [DeviceSender]()
     
     
     ///Method to initialize all senders

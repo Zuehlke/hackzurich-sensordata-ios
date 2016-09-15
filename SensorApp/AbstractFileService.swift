@@ -10,21 +10,21 @@ import AVFoundation
  */
 class AbstractFileService {
     
-    private let fileManager = NSFileManager.defaultManager()
+    fileprivate let fileManager = FileManager.default
     
     ///Folder where the app stores the sensor data as JSON
     internal func getDocumentsDirectory() -> NSString {
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        return paths.first!
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        return paths.first! as NSString
     }
     
     ///Delete file with a given path
-    func deleteFileAtPath(path: String?){
+    func deleteFileAtPath(_ path: String?){
         
         guard let path = path else {return}
         
         do {
-            try fileManager.removeItemAtPath(path)
+            try fileManager.removeItem(atPath: path)
             
         } catch {
             print("error deleting file \(path) \(error)")

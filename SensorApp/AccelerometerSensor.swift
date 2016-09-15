@@ -17,13 +17,13 @@ import CoreMotion
  */
 class AccelerometerSensor: AbstractSensor, DeviceSensor {
     
-    private weak var manager : CMMotionManager?
+    fileprivate weak var manager : CMMotionManager?
     
     /// A Bool that indicates that the accelerometer is available on the device
     var isAvailable : Bool{
         
         get{
-            return manager!.accelerometerAvailable
+            return manager!.isAccelerometerAvailable
         }
     }
     
@@ -58,24 +58,22 @@ class AccelerometerSensor: AbstractSensor, DeviceSensor {
         _isReporting = true
         
         manager.accelerometerUpdateInterval = 0.1
-        manager.startAccelerometerUpdatesToQueue(NSOperationQueue()) {
-            (data: CMAccelerometerData?, error: NSError?) in
-
+        manager.startAccelerometerUpdates(to: OperationQueue()) { (data:CMAccelerometerData?, error: Error?) in
             self.persistData(data)
         }
     }
     
     ///method that writes the data from the sensor into a dictionary structur for later JSON generation
-    private func persistData(data: CMAccelerometerData?){
+    fileprivate func persistData(_ data: CMAccelerometerData?){
         
         guard let data = data else {return}
         
         var params = [String:AnyObject]()
-        params["type"] = "Accelerometer"
-        params["date"] = dateFormatter.stringFromDate(NSDate())
-        params["x"] = data.acceleration.x
-        params["y"] = data.acceleration.y
-        params["z"] = data.acceleration.z
+        params["type"] = "Accelerometer" as AnyObject?
+        params["date"] = dateFormatter.string(from: Date()) as AnyObject?
+        params["x"] = data.acceleration.x as AnyObject?
+        params["y"] = data.acceleration.y as AnyObject?
+        params["z"] = data.acceleration.z as AnyObject?
         
         fileWriter?.addLine(params)
     }

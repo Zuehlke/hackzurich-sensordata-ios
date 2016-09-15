@@ -14,16 +14,16 @@ import UIKit
  */
 class BeaconSensor: AbstractSensor, DeviceSensor, CLLocationManagerDelegate {
     
-    private var locationManager = CLLocationManager()
+    fileprivate var locationManager = CLLocationManager()
 
     //beaconUUID must be specified that should be handled
-    private let beaconRegion = CLBeaconRegion(proximityUUID:  NSUUID(UUIDString:"f7826da6-4fa2-4e98-8024-bc5b71e0893e")!, identifier: "ranged region")
+    fileprivate let beaconRegion = CLBeaconRegion(proximityUUID:  UUID(uuidString:"f7826da6-4fa2-4e98-8024-bc5b71e0893e")!, identifier: "ranged region")
     
     /// A Bool that indicates that beacon ranging is available on the device
     var isAvailable : Bool{
         
         get{
-            if UIDevice.currentDevice().isSimulator{
+            if UIDevice.current.isSimulator{
                 return false
             }
             if !CLLocationManager.isRangingAvailable(){
@@ -62,37 +62,37 @@ class BeaconSensor: AbstractSensor, DeviceSensor, CLLocationManagerDelegate {
         
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
-        locationManager.startRangingBeaconsInRegion(beaconRegion)
+        locationManager.startRangingBeacons(in: beaconRegion)
     }
     
     /// beacons are found by the `CLLocationManager`
-    func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion){
+    func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion){
     
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
-             self.persistData(beacons)
-        })
+        DispatchQueue.global(qos: .background).async {
+            self.persistData(beacons)
+        }
     }
     
     ///method that writes the data from the sensor into a dictionary structur for later JSON generation
-    private func persistData(beacons: [CLBeacon]){
+    fileprivate func persistData(_ beacons: [CLBeacon]){
         
         guard beacons.count > 0 else {return}
         
         var params = [String:AnyObject]()
-        params["type"] = "Beacon"
-        params["date"] = dateFormatter.stringFromDate(NSDate())
+        params["type"] = "Beacon" as AnyObject?
+        params["date"] = dateFormatter.string(from: Date()) as AnyObject?
         
         var foundBeacons = [[String:AnyObject]]()
         for beacon in beacons{
             var beaconParams = [String:AnyObject]()
-            beaconParams["id"] = beacon.proximityUUID.UUIDString
+            beaconParams["id"] = beacon.proximityUUID.uuidString as AnyObject?
             beaconParams["major"] = beacon.major
             beaconParams["minor"] = beacon.minor
-            beaconParams["rssi"] = beacon.rssi
-            beaconParams["accuracy"] = beacon.accuracy
+            beaconParams["rssi"] = beacon.rssi as AnyObject?
+            beaconParams["accuracy"] = beacon.accuracy as AnyObject?
             foundBeacons.append(beaconParams)
         }
-        params["beacons"] = foundBeacons
+        params["beacons"] = foundBeacons as AnyObject?
         
         fileWriter?.addLine(params)
     }
@@ -100,7 +100,7 @@ class BeaconSensor: AbstractSensor, DeviceSensor, CLLocationManagerDelegate {
     
     ///method that stops sensor reading and generation of data
     func stopReporting(){
-        locationManager.stopRangingBeaconsInRegion(beaconRegion)
+        locationManager.stopRangingBeacons(in: beaconRegion)
         _isReporting = false
     }
     

@@ -11,11 +11,11 @@ class FileReaderService: AbstractFileService {
 
     
     ///Load oldest file by `SensorType` and return its data and its path as a tuple
-    func readOldestFileFromDisk(sensorType: SensorType)-> (data: NSData?, path: String?){
+    func readOldestFileFromDisk(_ sensorType: SensorType)-> (data: Data?, path: String?){
     
         if let path = pathOfOldestFileOnDisk(sensorType){
             do {
-                let jsonData = try NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
+                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 return (jsonData,path)
             } catch {
                 print("error reading file \(path) \(error)")
@@ -26,21 +26,21 @@ class FileReaderService: AbstractFileService {
     
     
     ///Find oldest file by `SensorType` and return its path
-    private func pathOfOldestFileOnDisk(sensorType: SensorType)->String?{
+    fileprivate func pathOfOldestFileOnDisk(_ sensorType: SensorType)->String?{
     
-        if let url = NSURL(string: getDocumentsDirectory() as String){
+        if let url = URL(string: getDocumentsDirectory() as String){
             
             ///All visibible files in documents directory
-            if let urlArray = try? NSFileManager.defaultManager().contentsOfDirectoryAtURL(url,
-                                                                                           includingPropertiesForKeys: [NSURLContentModificationDateKey], options:.SkipsHiddenFiles) {
+            if let urlArray = try? FileManager.default.contentsOfDirectory(at: url,
+                                                                                           includingPropertiesForKeys: [URLResourceKey.contentModificationDateKey], options:.skipsHiddenFiles) {
                 ///Filter path extension by `SensorType` and sort by modification date
                 let result = urlArray.filter{ $0.pathExtension == sensorType.rawValue}
-                    .map{ url -> (String, NSTimeInterval) in
+                    .map{ url -> (String, TimeInterval) in
                     var lastModified : AnyObject?
-                    _ = try? url.getResourceValue(&lastModified, forKey: NSURLContentModificationDateKey)
-                    return (url.relativePath!, lastModified?.timeIntervalSinceReferenceDate ?? 0)
+                    _ = try? (url as NSURL).getResourceValue(&lastModified, forKey: URLResourceKey.contentModificationDateKey)
+                    return (url.relativePath, lastModified?.timeIntervalSinceReferenceDate ?? 0)
                     }
-                    .sort({ $0.1 > $1.1 }) // sort descending modification dates
+                    .sorted(by: { $0.1 > $1.1 }) // sort descending modification dates
                     .map { $0.0 } // extract file names
                 
                 print("\(result.count) files on disk of type \(sensorType.rawValue)")

@@ -15,14 +15,14 @@ import CoreMotion
  */
 class GyroSensor: AbstractSensor, DeviceSensor {
 
-    private weak var manager : CMMotionManager?
+    fileprivate weak var manager : CMMotionManager?
     
     /// A Bool that indicates that the gyro is available on the device
     var isAvailable : Bool{
         
         get{
             guard let manager = manager else {return false}
-            return manager.gyroAvailable
+            return manager.isGyroAvailable
         }
     }
     
@@ -57,24 +57,23 @@ class GyroSensor: AbstractSensor, DeviceSensor {
         _isReporting = true
         
         manager.gyroUpdateInterval = 0.1
-        manager.startGyroUpdatesToQueue(NSOperationQueue()) {
-            (data: CMGyroData?, error: NSError?) in
-            
+        
+        manager.startGyroUpdates(to: OperationQueue()) { (data: CMGyroData?, error: Error?) in
             self.persistData(data)
         }
     }
     
     ///method that writes the data from the sensor into a dictionary structur for later JSON generation
-    private func persistData(data: CMGyroData?){
+    fileprivate func persistData(_ data: CMGyroData?){
     
         guard let data = data else {return}
         
         var params = [String:AnyObject]()
-        params["type"] = "Gyro"
-        params["date"] = dateFormatter.stringFromDate(NSDate())
-        params["x"] = data.rotationRate.x
-        params["y"] = data.rotationRate.y
-        params["z"] = data.rotationRate.z
+        params["type"] = "Gyro" as AnyObject?
+        params["date"] = dateFormatter.string(from: Date()) as AnyObject?
+        params["x"] = data.rotationRate.x as AnyObject?
+        params["y"] = data.rotationRate.y as AnyObject?
+        params["z"] = data.rotationRate.z as AnyObject?
         
         fileWriter?.addLine(params)
     }

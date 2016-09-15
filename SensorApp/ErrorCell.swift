@@ -14,16 +14,16 @@ class ErrorCell: UITableViewCell {
 
     static let cellIdentifier = "ErrorCell"
     
-    @IBOutlet weak var errorLabel: UILabel!
-    private let dateFormatter = Utils.dateFormatterShort()
+    @IBOutlet weak var errorLabel: UILabel! 
+    fileprivate let dateFormatter = Utils.dateFormatterShort()
 
-    func setDateOfLastError(date: NSDate?){
+    func setDateOfLastError(_ date: Date?){
     
         guard let date = date else{
             errorLabel.text = "no error"
             return
         }
-        errorLabel.text = dateFormatter.stringFromDate(date)
+        errorLabel.text = dateFormatter.string(from: date)
     }
 
 }

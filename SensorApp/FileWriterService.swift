@@ -11,12 +11,12 @@ import AVFoundation
  */
 class FileWriterService: AbstractFileService {
     
-    private var queue = [[String:AnyObject]]()
-    private var sensorType = SensorType.Invalid
-    private var fixedCacheSize = -1
+    fileprivate var queue = [[String:AnyObject]]()
+    fileprivate var sensorType = SensorType.Invalid
+    fileprivate var fixedCacheSize = -1
 
     ///Adds data to the queue. Parameter is a dictionary wich was build by the 'DeviceSensor'
-    func addLine(params: [String:AnyObject]){
+    func addLine(_ params: [String:AnyObject]){
         queue.append(params)
         
         if queue.count > cacheSize{
@@ -25,7 +25,7 @@ class FileWriterService: AbstractFileService {
     }
     
     ///Sensor specific cachesize as some sensors generate more data than others
-    private var cacheSize:Int{
+    fileprivate var cacheSize:Int{
     
         if fixedCacheSize > -1{
             return fixedCacheSize
@@ -50,22 +50,22 @@ class FileWriterService: AbstractFileService {
     }
     
     ///Hide basic initializer
-    private override init(){}
+    fileprivate override init(){}
     
     //creating the JSON file and use a filename based on current date and `SensorType`
-    private func writeFileToDisk(){
+    fileprivate func writeFileToDisk(){
     
         guard queue.count > 0 else { return }
         
-        let jsonData = try! NSJSONSerialization.dataWithJSONObject(queue, options: NSJSONWritingOptions.PrettyPrinted)
+        let jsonData = try! JSONSerialization.data(withJSONObject: queue, options: JSONSerialization.WritingOptions.prettyPrinted)
         
         //filename is current date as timeinterval plus sensor type name
 
-        let filename = "\(NSDate().timeIntervalSince1970).\(sensorType.rawValue)"
-        let pathName = super.getDocumentsDirectory().stringByAppendingPathComponent(filename)
+        let filename = "\(Date().timeIntervalSince1970).\(sensorType.rawValue)"
+        let pathName = super.getDocumentsDirectory().appendingPathComponent(filename)
         
         do {
-            try jsonData.writeToFile(pathName, options:  NSDataWritingOptions.DataWritingAtomic)
+            try jsonData.write(to: URL(fileURLWithPath: pathName), options:  NSData.WritingOptions.atomic)
         } catch {
             print("error writing file \(pathName)")
         }

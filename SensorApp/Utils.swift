@@ -10,21 +10,21 @@ import UIKit
 /**
  The purpose of the `Utils` class is to provide helper methods that could be useful to other classes
  */
-class Utils {
+public class Utils {
     
     ///A datFormatter that helps creating a datestring that the backend accepts
-    static func dateFormatter()-> NSDateFormatter{
-        let formatter = NSDateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+    static func dateFormatter()-> DateFormatter{
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
         
         return formatter
     }
     
     ///A dateFormatter that helps creating a short date string for the UI 
-    static func dateFormatterShort()-> NSDateFormatter{
-        let formatter = NSDateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+    static func dateFormatterShort()-> DateFormatter{
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "HH:mm:ss"
         return formatter
     }

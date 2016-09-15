@@ -15,16 +15,16 @@ import UIKit
  */
 class BeaconSender: NSObject, DeviceSender, CBPeripheralManagerDelegate {
 
-    private var localBeacon: CLBeaconRegion!
-    private var beaconPeripheralData: NSDictionary!
-    private var peripheralManager: CBPeripheralManager!
+    fileprivate var localBeacon: CLBeaconRegion!
+    fileprivate var beaconPeripheralData: NSDictionary!
+    fileprivate var peripheralManager: CBPeripheralManager!
     
     
     /// A Bool that indicates that beacon ranging is available on the device
     var isAvailable : Bool{
         
         get{
-            if UIDevice.currentDevice().isSimulator{
+            if UIDevice.current.isSimulator{
                 return false
             }
             if !CLLocationManager.isRangingAvailable(){
@@ -47,8 +47,8 @@ class BeaconSender: NSObject, DeviceSender, CBPeripheralManagerDelegate {
         get{
             let key = "BEACON_MAJOR"
             
-            let defaults = NSUserDefaults.standardUserDefaults()
-            var major  = defaults.integerForKey(key)
+            let defaults = UserDefaults.standard
+            var major  = defaults.integer(forKey: key)
             
             if major != 0 {
               return major
@@ -68,8 +68,8 @@ class BeaconSender: NSObject, DeviceSender, CBPeripheralManagerDelegate {
         get{
             let key = "BEACON_MINOR"
             
-            let defaults = NSUserDefaults.standardUserDefaults()
-            var minor  = defaults.integerForKey(key)
+            let defaults = UserDefaults.standard
+            var minor  = defaults.integer(forKey: key)
             
             if minor != 0 {
                 return minor
@@ -96,10 +96,10 @@ class BeaconSender: NSObject, DeviceSender, CBPeripheralManagerDelegate {
         let localBeaconMajor: CLBeaconMajorValue = UInt16(beaconMajor)
         let localBeaconMinor: CLBeaconMinorValue = UInt16(beaconMinor)
         
-        let uuid = NSUUID(UUIDString: localBeaconUUID)!
+        let uuid = UUID(uuidString: localBeaconUUID)!
         localBeacon = CLBeaconRegion(proximityUUID: uuid, major: localBeaconMajor, minor: localBeaconMinor, identifier: "iPhone Beacon")
         
-        beaconPeripheralData = localBeacon.peripheralDataWithMeasuredPower(NSNumber(int: 1))
+        beaconPeripheralData = localBeacon.peripheralData(withMeasuredPower: NSNumber(value: 1 as Int32))
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: nil)
     }
     
@@ -114,23 +114,23 @@ class BeaconSender: NSObject, DeviceSender, CBPeripheralManagerDelegate {
 
 
     ///CBPeripheralManagerDelegate method: start and stop advertising based on state
-    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
+    func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
        
-        if peripheral.state == .PoweredOn {
+        if peripheral.state == .poweredOn {
             peripheralManager.startAdvertising(beaconPeripheralData as! [String: AnyObject]!)
-        } else if peripheral.state == .PoweredOff {
+        } else if peripheral.state == .poweredOff {
             peripheralManager.stopAdvertising()
         }
     }
     
     
     ///CBPeripheralManagerDelegate method: printing feedback of advertising
-    func peripheralManagerDidStartAdvertising(peripheral: CBPeripheralManager, error: NSError?) {
+    func peripheralManagerDidStartAdvertising(_ peripheral: CBPeripheralManager, error: Error?) {
         
         if let error = error{
             print("Error with beaconSender: \(error.localizedDescription)")
         }else {
-            print("Device acts as a beacon now: \nUUID:\(localBeacon.proximityUUID.UUIDString)\nMajor: \(localBeacon.major!)\nMinor:\(localBeacon.minor!)")
+            print("Device acts as a beacon now: \nUUID:\(localBeacon.proximityUUID.uuidString)\nMajor: \(localBeacon.major!)\nMinor:\(localBeacon.minor!)")
         }
     }
     

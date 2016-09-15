@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ED851C7B4E2CD76C28C90A984F4C3650EA7F85D6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B1B783BF8323E4F9487AC61D931B1800828CC417" : 9223372036854775807,
+    "ED851C7B4E2CD76C28C90A984F4C3650EA7F85D6" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9539EB91-87D0-4371-AB6C-63CBE4B83FCE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B1B783BF8323E4F9487AC61D931B1800828CC417" : "",
+    "ED851C7B4E2CD76C28C90A984F4C3650EA7F85D6" : "SensorApp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SensorApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SensorApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:hackzuerich2016\/iossensorapp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B1B783BF8323E4F9487AC61D931B1800828CC417"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Zuehlke\/hackzurich-sensordata-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ED851C7B4E2CD76C28C90A984F4C3650EA7F85D6"
+    }
+  ]
+}

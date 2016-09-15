@@ -22,11 +22,11 @@ extension UIDevice  {
         
         let key = "DEVICE_ID"
     
-        let defaults = NSUserDefaults.standardUserDefaults()
-        if  let device  = defaults.stringForKey(key){
+        let defaults = UserDefaults.standard
+        if  let device  = defaults.string(forKey: key){
             return device
         }else{
-            let device = NSUUID().UUIDString
+            let device = UUID().uuidString
             defaults.setValue(device, forKey: key)
             defaults.synchronize()
             return device

@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     ///When the application lauches all sensors are setup and the data transfer is initialized
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // initializing default settings
         SettingModel.sharedInstance.setup()
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SenderModel.sharedInstance.startAllSenders()
 
 
-        UIApplication.sharedApplication().idleTimerDisabled = true
+        UIApplication.shared.isIdleTimerDisabled = true
         
         return true
     }

@@ -14,9 +14,9 @@ class SensorTogglesViewController: UIViewController {
     @IBOutlet weak var settingsTable: UITableView!
     
 
-    private var settings = [SettingItem]()
-    private var deviceSensors = [DeviceSensor]()
-    private var dateOfLastError : NSDate?
+    fileprivate var settings = [SettingItem]()
+    fileprivate var deviceSensors = [DeviceSensor]()
+    fileprivate var dateOfLastError : Date?
    
     ///Gets called when view is ready to be displayed
     override func viewDidLoad() {
@@ -28,31 +28,31 @@ class SensorTogglesViewController: UIViewController {
         settingsTable.dataSource = self
         settingsTable.delegate = self
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(showTransmissionError(_:)), name: "TRANSMISSION_ERROR", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showTransmissionError(_:)), name: NSNotification.Name(rawValue: "TRANSMISSION_ERROR"), object: nil)
     }
     
     ///Is been called by NSNotificationCenter
-    func showTransmissionError(notification: NSNotification){
+    func showTransmissionError(_ notification: Notification){
     
-        dispatch_async(dispatch_get_main_queue(),{
+        DispatchQueue.main.async(execute: {
         
-            if let date = notification.object as? NSDate{
+            if let date = notification.object as? Date{
                 self.dateOfLastError = date
             }
-            self.settingsTable.reloadSections(NSIndexSet(index: 2), withRowAnimation: .None)
+            self.settingsTable.reloadSections(IndexSet(integer: 2), with: .none)
         })
     }
     
     ///Gets a setting cell for the specified row
-    func resolveSettingsCell(tableView: UITableView, indexPath: NSIndexPath) -> SettingCell{
+    func resolveSettingsCell(_ tableView: UITableView, indexPath: IndexPath) -> SettingCell{
         ///If the row number exceeds the number of settings an empty setting cell is returned
-        guard indexPath.row < settings.count else {
+        guard (indexPath as NSIndexPath).row < settings.count else {
             return SettingCell()
         }
             
-        let settingItem = settings[indexPath.row]
+        let settingItem = settings[(indexPath as NSIndexPath).row]
         
-        if let cell = tableView.dequeueReusableCellWithIdentifier(SettingCell.cellIdentifier, forIndexPath: indexPath) as? SettingCell{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: SettingCell.cellIdentifier, for: indexPath) as? SettingCell{
             cell.setDisplayName(settingItem.displayName)
             
             return cell;
@@ -62,15 +62,15 @@ class SensorTogglesViewController: UIViewController {
     }
     
     ///Gets a sensor (toggle) cell for the specified row
-    func resolveSensorCell(tableView: UITableView, indexPath: NSIndexPath) -> SensorCell{
+    func resolveSensorCell(_ tableView: UITableView, indexPath: IndexPath) -> SensorCell{
         ///If the row number exceeds the number of settings an empty sensor cell is returned
-        guard indexPath.row < deviceSensors.count else {
+        guard (indexPath as NSIndexPath).row < deviceSensors.count else {
             return SensorCell()
         }
         
-        let sensor = deviceSensors[indexPath.row]
+        let sensor = deviceSensors[(indexPath as NSIndexPath).row]
         
-        if let cell = tableView.dequeueReusableCellWithIdentifier(SensorCell.cellIdentifier, forIndexPath: indexPath) as? SensorCell{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: SensorCell.cellIdentifier, for: indexPath) as? SensorCell{
             cell.initializeSensorCell(sensor)
             
             return cell
@@ -80,9 +80,9 @@ class SensorTogglesViewController: UIViewController {
     }
     
     ///Gets an error cell for the specified row
-    func resolveErrorCell(tableView: UITableView, indexPath: NSIndexPath) -> ErrorCell{
+    func resolveErrorCell(_ tableView: UITableView, indexPath: IndexPath) -> ErrorCell{
         
-        if let cell = tableView.dequeueReusableCellWithIdentifier(ErrorCell.cellIdentifier, forIndexPath: indexPath) as? ErrorCell{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: ErrorCell.cellIdentifier, for: indexPath) as? ErrorCell{
             cell.setDateOfLastError(dateOfLastError)
             
             return cell
@@ -97,11 +97,11 @@ class SensorTogglesViewController: UIViewController {
 extension SensorTogglesViewController: UITableViewDataSource {
     
     ///Table view consists 3 section
-    func numberOfSectionsInTableView (tableView: UITableView) -> Int {
+    func numberOfSections (in tableView: UITableView) -> Int {
         return 3
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         switch section {
         case 0:
@@ -117,11 +117,11 @@ extension SensorTogglesViewController: UITableViewDataSource {
     }
     
     ///Returns the right table cell according to the section
-    func tableView(tableView: UITableView,
-                   cellForRowAtIndexPath indexPath: NSIndexPath)
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath)
         -> UITableViewCell{
             
-            let section = indexPath.section
+            let section = (indexPath as NSIndexPath).section
             
             if section == 0{
                 return resolveSensorCell(tableView, indexPath: indexPath)
@@ -138,38 +138,38 @@ extension SensorTogglesViewController: UITableViewDataSource {
 ///Extension to satisfy the protocoll
 extension SensorTogglesViewController: UITableViewDelegate{
     ///Delegate that is called when a table cell in setting section is tapped. Displays a pop-up with a text input when tapped
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        guard indexPath.section == 1 else {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard (indexPath as NSIndexPath).section == 1 else {
             return
         }
         
-        let settingItem = settings[indexPath.row]
+        let settingItem = settings[(indexPath as NSIndexPath).row]
         
         let alert = UIAlertController(title: settingItem.displayName,
                                       message: "Set a value for \(settingItem.displayName)",
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         ///Handles to save the new setting value when user taps on save
-        let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.Default) {(action: UIAlertAction) in
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.default) {(action: UIAlertAction) in
             if let textfield = alert.textFields![0] as UITextField?{
                 settingItem.value = textfield.text!
             }
         }
         
         ///Makes no action when user taps on cancel
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil)
         
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
         
-        alert.addTextFieldWithConfigurationHandler { (textField: UITextField) in
+        alert.addTextField { (textField: UITextField) in
             textField.text = settingItem.value
         }
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     ///Gets the name of the specified section
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    private func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
             return "Sensors"

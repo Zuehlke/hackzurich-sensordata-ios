@@ -15,14 +15,14 @@ import CoreMotion
  */
 class MagnetometerSensor: AbstractSensor, DeviceSensor {
 
-    private weak var manager : CMMotionManager?
+    fileprivate weak var manager : CMMotionManager?
     
     /// A Bool that indicates that the magnetometer is available on the device
     var isAvailable : Bool{
         
         get{
             guard let manager = manager else {return false}
-            return manager.magnetometerAvailable
+            return manager.isMagnetometerAvailable
         }
     }
     
@@ -57,24 +57,22 @@ class MagnetometerSensor: AbstractSensor, DeviceSensor {
         _isReporting = true
         
         manager.magnetometerUpdateInterval = 0.1
-        manager.startMagnetometerUpdatesToQueue(NSOperationQueue()) {
-            (data: CMMagnetometerData?, error: NSError?) in
-            
+        manager.startMagnetometerUpdates(to: OperationQueue()) { (data:CMMagnetometerData?, error: Error?) in
             self.persistData(data)
         }
     }
     
     ///method that writes the data from the sensor into a dictionary structur for later JSON generation
-    private func persistData(data: CMMagnetometerData?){
+    fileprivate func persistData(_ data: CMMagnetometerData?){
         
         guard let data = data else {return}
         
         var params = [String:AnyObject]()
-        params["type"] = "Magnetometer"
-        params["date"] = dateFormatter.stringFromDate(NSDate())
-        params["x"] = data.magneticField.x
-        params["y"] = data.magneticField.y
-        params["z"] = data.magneticField.z
+        params["type"] = "Magnetometer" as AnyObject?
+        params["date"] = dateFormatter.string(from: Date()) as AnyObject?
+        params["x"] = data.magneticField.x as AnyObject?
+        params["y"] = data.magneticField.y as AnyObject?
+        params["z"] = data.magneticField.z as AnyObject?
         
         fileWriter?.addLine(params)
     }

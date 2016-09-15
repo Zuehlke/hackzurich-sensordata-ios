@@ -12,7 +12,7 @@ import Foundation
  */
 class SettingModel: NSObject{
     static let sharedInstance = SettingModel()
-    private var settingStore = [SettingItem]()
+    fileprivate var settingStore = [SettingItem]()
     
     func setup(){
         settingStore.append(SettingItem(isEnabled: true, displayName: "User name", descriptor: .Username, defaultValue: "hackzurich"))
@@ -26,8 +26,8 @@ class SettingModel: NSObject{
     }
     
     ///Retrieves a setting item via the setting descriptor. Returns nil of setting item could not be found
-    func getSetting(descriptor: SettingDescriptor) -> SettingItem? {
-        if let index = settingStore.indexOf({$0.descriptor == descriptor}){
+    func getSetting(_ descriptor: SettingDescriptor) -> SettingItem? {
+        if let index = settingStore.index(where: {$0.descriptor == descriptor}){
             return settingStore[index]
         }
         

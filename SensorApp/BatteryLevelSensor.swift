@@ -12,13 +12,13 @@ import UIKit
  */
 class BatteryLevelSensor: AbstractSensor, DeviceSensor {
 
-    private var device = UIDevice.currentDevice()
+    fileprivate var device = UIDevice.current
     
     /// A Bool that indicates that the batterymonitor is available on the device which is the case on real hardware
     var isAvailable : Bool{
         
         get{
-            if UIDevice.currentDevice().isSimulator{
+            if UIDevice.current.isSimulator{
                 return false
             }
             return true
@@ -50,49 +50,49 @@ class BatteryLevelSensor: AbstractSensor, DeviceSensor {
             return
         }
         _isReporting = true
-        device.batteryMonitoringEnabled = true
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.batteryLevelChanged(_:)), name: UIDeviceBatteryLevelDidChangeNotification, object: nil)
+        device.isBatteryMonitoringEnabled = true
+        NotificationCenter.default.addObserver(self, selector: #selector(self.batteryLevelChanged(_:)), name: NSNotification.Name.UIDeviceBatteryLevelDidChange, object: nil)
     }
     
     /**
      Method that gets called if the battery level has changed
      */
-    func batteryLevelChanged(notification: NSNotification){
-    
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+    func batteryLevelChanged(_ notification: Notification){
+
+        DispatchQueue.global(qos: .background).async {
             self.persistData(self.device)
-        })
+        }
     }
     
     ///method that writes the data from the sensor into a dictionary structur for later JSON generation
-    private func persistData(device: UIDevice){
+    fileprivate func persistData(_ device: UIDevice){
         
         var params = [String:AnyObject]()
-        params["type"] = "Battery"
-        params["date"] = dateFormatter.stringFromDate(NSDate())
-        params["batteryLevel"] = device.batteryLevel
-        params["batteryState"] = convertBatteryStateToString(device.batteryState)
+        params["type"] = "Battery" as AnyObject?
+        params["date"] = dateFormatter.string(from: Date()) as AnyObject?
+        params["batteryLevel"] = device.batteryLevel as AnyObject?
+        params["batteryState"] = convertBatteryStateToString(device.batteryState) as AnyObject?
         
         fileWriter?.addLine(params)
     }
     
     ///method that stops sensor reading and generation of data
     func stopReporting(){
-       device.batteryMonitoringEnabled = false
+       device.isBatteryMonitoringEnabled = false
         _isReporting = false
     }
     
     
-    private func convertBatteryStateToString(state: UIDeviceBatteryState) -> String{
+    fileprivate func convertBatteryStateToString(_ state: UIDeviceBatteryState) -> String{
         
         switch state {
-        case .Unknown:
+        case .unknown:
             return "Unknown"
-        case .Unplugged:
+        case .unplugged:
             return "Unplugged"
-        case .Charging:
+        case .charging:
             return "Charging" // plugged in, less than 100%
-        case .Full:
+        case .full:
             return "Full"
         }
     }

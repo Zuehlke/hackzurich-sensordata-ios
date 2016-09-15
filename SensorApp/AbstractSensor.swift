@@ -9,18 +9,18 @@ import AVFoundation
 /**
  The purpose of the `AbstractSensor` class is to provide variables and methods to DeviceSensor classes in respect to the DRY principle
  */
-class AbstractSensor: NSObject {
+public class AbstractSensor: NSObject {
 
     ///A fileWiter is used to write read data to cache
     var fileWriter: FileWriterService?
     
     ///A dateformatter to write the date of the reading to cache as a formatted string
-    let dateFormatter = Utils.dateFormatter()
+    public let dateFormatter = Utils.dateFormatter()
     
     ///A instance of NSUserDefaults to persist settings of the app
-    let defaults = NSUserDefaults.standardUserDefaults()
+    let defaults = UserDefaults.standard
     
-    private var deviceType: SensorType = .Invalid
+    fileprivate var deviceType: SensorType = .Invalid
     var _isReporting = false
     
     ///Initializer that takes the `FileWriterService` and the `SensorType`
@@ -30,15 +30,15 @@ class AbstractSensor: NSObject {
     }
 
     ///Prevent simple initialization
-    private override init(){}
+    fileprivate override init(){}
     
     ///Bool that indicates if `DeviceSensor` has been activated
     var isActive: Bool{
         get{
-            return defaults.boolForKey(deviceType.rawValue)
+            return defaults.bool(forKey: deviceType.rawValue)
         }
         set{
-            defaults.setBool(newValue, forKey: deviceType.rawValue)
+            defaults.set(newValue, forKey: deviceType.rawValue)
             defaults.synchronize()
         }
     }

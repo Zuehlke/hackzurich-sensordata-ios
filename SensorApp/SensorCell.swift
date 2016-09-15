@@ -15,28 +15,28 @@ class SensorCell: UITableViewCell {
     static let cellIdentifier = "SensorCell"
     @IBOutlet weak var toggle: UISwitch!
     @IBOutlet weak var label: UILabel!
-    private var sensor: DeviceSensor?
+    fileprivate var sensor: DeviceSensor?
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     ///Sets the cell's properties
-    func initializeSensorCell(sensorData: DeviceSensor){
-        toggle.enabled = sensorData.isAvailable
+    func initializeSensorCell(_ sensorData: DeviceSensor){
+        toggle.isEnabled = sensorData.isAvailable
         label.text = sensorData.type.rawValue
-        toggle.on = sensorData.isActive
+        toggle.isOn = sensorData.isActive
         sensor = sensorData
     }
 
     ///Action listener when the toggle is tapped. Starts or stops the sensor. 
-    @IBAction func toggleSensor(sender: UISwitch) {
-        if(sender.on){
+    @IBAction func toggleSensor(_ sender: UISwitch) {
+        if(sender.isOn){
             sensor?.startReporting()
         }
         else{
             sensor?.stopReporting()
         }
-        sensor?.isActive = sender.on
+        sensor?.isActive = sender.isOn
     }
 }

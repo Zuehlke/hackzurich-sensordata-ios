@@ -15,7 +15,7 @@ import CoreMotion
  */
 class DeviceMotionSensor: AbstractSensor, DeviceSensor {
 
-    private weak var manager : CMMotionManager?
+    fileprivate weak var manager : CMMotionManager?
 
     
     /// A Bool that indicates that the motion sensor is available on the device
@@ -23,7 +23,7 @@ class DeviceMotionSensor: AbstractSensor, DeviceSensor {
         
         get{
             guard let manager = manager else {return false}
-            return manager.magnetometerAvailable
+            return manager.isMagnetometerAvailable
         }
     }
     
@@ -58,54 +58,52 @@ class DeviceMotionSensor: AbstractSensor, DeviceSensor {
         _isReporting = true
         
         manager.deviceMotionUpdateInterval = 0.1
-        manager.startDeviceMotionUpdatesToQueue(NSOperationQueue()) {
-            (data: CMDeviceMotion?, error: NSError?) in
-            
+        manager.startDeviceMotionUpdates(to: OperationQueue()) { (data:CMDeviceMotion?, error:Error?) in
             self.persistData(data)
         }
     }
     
     
     ///method that writes the data from the sensor into a dictionary structur for later JSON generation
-    private func persistData(data: CMDeviceMotion?){
+    fileprivate func persistData(_ data: CMDeviceMotion?){
         
         guard let data = data else {return}
         
         var params = [String:AnyObject]()
-        params["type"] = "DeviceMotion"
-        params["date"] = dateFormatter.stringFromDate(NSDate())
+        params["type"] = "DeviceMotion" as AnyObject?
+        params["date"] = dateFormatter.string(from: Date()) as AnyObject?
         
         var attitude = [String:AnyObject]()
-        attitude["pitch"] = data.attitude.pitch
-        attitude["yaw"] = data.attitude.yaw
-        attitude["roll"] = data.attitude.roll
+        attitude["pitch"] = data.attitude.pitch as AnyObject?
+        attitude["yaw"] = data.attitude.yaw as AnyObject?
+        attitude["roll"] = data.attitude.roll as AnyObject?
         
         var quaternion = [String:AnyObject]()
-        quaternion["w"] = data.attitude.quaternion.w
-        quaternion["x"] = data.attitude.quaternion.x
-        quaternion["y"] = data.attitude.quaternion.y
-        quaternion["z"] = data.attitude.quaternion.z
-        attitude["quaternion"] = quaternion
+        quaternion["w"] = data.attitude.quaternion.w as AnyObject?
+        quaternion["x"] = data.attitude.quaternion.x as AnyObject?
+        quaternion["y"] = data.attitude.quaternion.y as AnyObject?
+        quaternion["z"] = data.attitude.quaternion.z as AnyObject?
+        attitude["quaternion"] = quaternion as AnyObject?
         
         var rotationRate = [String:AnyObject]()
-        rotationRate["x"] = data.rotationRate.x
-        rotationRate["y"] = data.rotationRate.y
-        rotationRate["z"] = data.rotationRate.z
-        attitude["rotationRate"] = rotationRate
+        rotationRate["x"] = data.rotationRate.x as AnyObject?
+        rotationRate["y"] = data.rotationRate.y as AnyObject?
+        rotationRate["z"] = data.rotationRate.z as AnyObject?
+        attitude["rotationRate"] = rotationRate as AnyObject?
         
         var rotationMatrix = [String:AnyObject]()
-        rotationMatrix["m11"] = data.attitude.rotationMatrix.m11
-        rotationMatrix["m12"] = data.attitude.rotationMatrix.m12
-        rotationMatrix["m13"] = data.attitude.rotationMatrix.m13
-        rotationMatrix["m21"] = data.attitude.rotationMatrix.m21
-        rotationMatrix["m22"] = data.attitude.rotationMatrix.m22
-        rotationMatrix["m23"] = data.attitude.rotationMatrix.m23
-        rotationMatrix["m31"] = data.attitude.rotationMatrix.m31
-        rotationMatrix["m32"] = data.attitude.rotationMatrix.m32
-        rotationMatrix["m33"] = data.attitude.rotationMatrix.m33
-        attitude["rotationMatrix"] = rotationMatrix
+        rotationMatrix["m11"] = data.attitude.rotationMatrix.m11 as AnyObject?
+        rotationMatrix["m12"] = data.attitude.rotationMatrix.m12 as AnyObject?
+        rotationMatrix["m13"] = data.attitude.rotationMatrix.m13 as AnyObject?
+        rotationMatrix["m21"] = data.attitude.rotationMatrix.m21 as AnyObject?
+        rotationMatrix["m22"] = data.attitude.rotationMatrix.m22 as AnyObject?
+        rotationMatrix["m23"] = data.attitude.rotationMatrix.m23 as AnyObject?
+        rotationMatrix["m31"] = data.attitude.rotationMatrix.m31 as AnyObject?
+        rotationMatrix["m32"] = data.attitude.rotationMatrix.m32 as AnyObject?
+        rotationMatrix["m33"] = data.attitude.rotationMatrix.m33 as AnyObject?
+        attitude["rotationMatrix"] = rotationMatrix as AnyObject?
         
-        params["attitude"] = attitude
+        params["attitude"] = attitude as AnyObject?
         
         fileWriter?.addLine(params)
     }

@@ -27,10 +27,14 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>To measure the brightness</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Location services required for iBeacon</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location services required for iBeacon</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>To measure the loudness</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

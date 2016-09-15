@@ -12,10 +12,10 @@ import CoreMotion
 class SensorModel: NSObject {
 
     static let sharedInstance = SensorModel()
-    private var sensorStore = [DeviceSensor]()
-    private var transferServices = [TransferService]()
-    private let motionManager = CMMotionManager()
-    private override init() {}
+    fileprivate var sensorStore = [DeviceSensor]()
+    fileprivate var transferServices = [TransferService]()
+    fileprivate let motionManager = CMMotionManager()
+    fileprivate override init() {}
     
     ///Method to Initialize all sensors
     func setup(){
@@ -32,7 +32,7 @@ class SensorModel: NSObject {
         restoreRunningState()
     }
     
-    private func restoreRunningState(){
+    fileprivate func restoreRunningState(){
     
         for sensor in sensorStore{
             if sensor.isActive && !sensor.isReporting{
@@ -69,14 +69,14 @@ class SensorModel: NSObject {
     func startTransfer(){
         
         transferServices.removeAll()
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+    
+        DispatchQueue.global(qos: .background).async {
             
             for sensor in self.sensorStore{
                 let transferService = TransferService(sensorType: sensor.type)
                 self.transferServices.append(transferService)
                 transferService.transfer()
             }
-        })
+        }
     } 
 }

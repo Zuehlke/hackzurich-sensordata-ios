@@ -15,7 +15,7 @@ import CoreMotion
  */
 class BarometerSensor: AbstractSensor, DeviceSensor {
 
-    private var altimeter = CMAltimeter()
+    fileprivate var altimeter = CMAltimeter()
 
     /// A Bool that indicates that the barometer is available on the device
     var isAvailable : Bool{
@@ -52,21 +52,20 @@ class BarometerSensor: AbstractSensor, DeviceSensor {
         }
         _isReporting = true
        
-        altimeter.startRelativeAltitudeUpdatesToQueue(NSOperationQueue()) {
-            (data:CMAltitudeData?, error:NSError?) in
+        altimeter.startRelativeAltitudeUpdates(to: OperationQueue()) { (data: CMAltitudeData?, error: Error?) in
             self.persistData(data)
         }
     }
     
     
     ///method that writes the data from the sensor into a dictionary structur for later JSON generation
-    private func persistData(data: CMAltitudeData?){
+    fileprivate func persistData(_ data: CMAltitudeData?){
         
         guard let data = data else {return}
         
         var params = [String:AnyObject]()
-        params["type"] = "Barometer"
-        params["date"] = dateFormatter.stringFromDate(NSDate())
+        params["type"] = "Barometer" as AnyObject?
+        params["date"] = dateFormatter.string(from: Date()) as AnyObject?
         
         params["relativeAltitude"] = data.relativeAltitude
         params["pressure"] = data.pressure

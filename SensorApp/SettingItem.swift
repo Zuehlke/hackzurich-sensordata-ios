@@ -20,7 +20,7 @@ enum SettingDescriptor: String{
  Represents an individual setting entry.
  */
 class SettingItem{
-    private let defaults = NSUserDefaults.standardUserDefaults()
+    fileprivate let defaults = UserDefaults.standard
     
     var isEnabled: Bool
     var displayName: String
@@ -37,10 +37,10 @@ class SettingItem{
     ///Retrieves the value of the setting as String. If there is none, the default value is returned.
     var value: String {
         get {
-            return defaults.stringForKey(descriptor.rawValue) ?? defaultValue
+            return defaults.string(forKey: descriptor.rawValue) ?? defaultValue
         }
         set {
-            defaults.setObject(newValue, forKey: descriptor.rawValue)
+            defaults.set(newValue, forKey: descriptor.rawValue)
             defaults.synchronize()
         }
     }

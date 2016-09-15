@@ -12,25 +12,25 @@ import UIKit
  */
 class TransferService: NSObject {
 
-    private let fileReaderService = FileReaderService()
-    private let urlString = SettingModel.sharedInstance.getSetting(SettingDescriptor.WebApiUrl)!.value
-    private let username = SettingModel.sharedInstance.getSetting(SettingDescriptor.Username)!.value
-    private let password = SettingModel.sharedInstance.getSetting(SettingDescriptor.Password)!.value
-    private var loginString: String?
-    private var deviceID = UIDevice.currentDevice().deviceID
-    private var deviceType = UIDevice.currentDevice().systemName
-    private var sensorType = SensorType.Invalid
-    private var transmissionInterval = 5.0
+    fileprivate let fileReaderService = FileReaderService()
+    fileprivate let urlString = SettingModel.sharedInstance.getSetting(SettingDescriptor.WebApiUrl)!.value
+    fileprivate let username = SettingModel.sharedInstance.getSetting(SettingDescriptor.Username)!.value
+    fileprivate let password = SettingModel.sharedInstance.getSetting(SettingDescriptor.Password)!.value
+    fileprivate var loginString: String?
+    fileprivate var deviceID = UIDevice.current.deviceID
+    fileprivate var deviceType = UIDevice.current.systemName
+    fileprivate var sensorType = SensorType.Invalid
+    fileprivate var transmissionInterval = 5.0
     
-    private var base64LoginString: String{
+    fileprivate var base64LoginString: String{
     
         get{
             if let loginString = loginString{
                 return loginString
             }
             else{
-                let loginData : NSData = NSString(format: "%@:%@", username, password).dataUsingEncoding(NSUTF8StringEncoding)!
-                loginString = loginData.base64EncodedStringWithOptions([])
+                let loginData : Data = NSString(format: "%@:%@", username, password).data(using: String.Encoding.utf8.rawValue)!
+                loginString = loginData.base64EncodedString(options: [])
                 return loginString!
             }
         }
@@ -64,72 +64,73 @@ class TransferService: NSObject {
         }
     }
     
-    private func callTransferWithDelay(){
+    fileprivate func callTransferWithDelay(){
         //repeat 5 seconds after queue is empty - as we are in a background thread things are a bit more complicated
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
-            let timer = NSTimer.scheduledTimerWithTimeInterval(self.transmissionInterval, target: self, selector: #selector(self.transfer), userInfo: nil, repeats: false)
-            NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
-            NSRunLoop.currentRunLoop().run()
-        });
+        DispatchQueue.global(qos: .background).async {
+            let timer = Timer.scheduledTimer(timeInterval: self.transmissionInterval, target: self, selector: #selector(self.transfer), userInfo: nil, repeats: false)
+            RunLoop.current.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
+            RunLoop.current.run()
+        }
     }
     
     ///Add deviceID and deviceType as URL parameter so that the backend identifies the sensor device
-    private func buildURL()->NSURL?{
+    fileprivate func buildURL()->URL?{
     
-        let components = NSURLComponents(string: urlString)
-        let deviceIDParam = NSURLQueryItem(name: "deviceID", value: deviceID)
-        let deviceTypeParam = NSURLQueryItem(name: "deviceType", value: deviceType)
+        var components = URLComponents(string: urlString)
+        let deviceIDParam = URLQueryItem(name: "deviceID", value: deviceID)
+        let deviceTypeParam = URLQueryItem(name: "deviceType", value: deviceType)
         components?.queryItems = [deviceIDParam, deviceTypeParam]
         
-        return components?.URL
+        return components?.url
     }
     
     ///Create request: Only basic authentication to keep things simple
-    private func buildURLRequest() -> NSMutableURLRequest?{
+    fileprivate func buildURLRequest() -> URLRequest?{
         
         guard let url = buildURL() else {
             print("onvalid url")
             return nil
         }
         
-        let request = NSMutableURLRequest(URL: url)
+        var request = URLRequest(url: url)
         request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        request.HTTPMethod = "POST"
+        request.httpMethod = "POST"
         request.timeoutInterval = 60
         
         return request
     }
     
     ///Transfer data with a success callback handler
-    private func transferData(jsonData: NSData, successHandler: Bool -> ()){
+    fileprivate func transferData(_ jsonData: Data, successHandler: @escaping (Bool) -> ()){
         
-        guard let request = buildURLRequest() else {
+        guard var request = buildURLRequest() else {
             return
         }
         
-        request.HTTPBody = jsonData
+        request.httpBody = jsonData
         
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
+        
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
            
             if error != nil {
                 print("Error -> \(error?.localizedDescription)")
                 successHandler(false)
-                NSNotificationCenter.defaultCenter().postNotificationName("TRANSMISSION_ERROR", object: NSDate())
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "TRANSMISSION_ERROR"), object: Date())
                 return
             }
             
-            if let resp = response as? NSHTTPURLResponse{
+            if let resp = response as? HTTPURLResponse{
                 if resp.statusCode >= 400{
                     print("Error -> invalid statuscode")
                     successHandler(false)
-                    NSNotificationCenter.defaultCenter().postNotificationName("TRANSMISSION_ERROR", object: NSDate())
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: "TRANSMISSION_ERROR"), object: Date())
                     return
                 }
             }
             successHandler(true)
             print("data transfered")
-        }
+        })
         task.resume()
     }
     

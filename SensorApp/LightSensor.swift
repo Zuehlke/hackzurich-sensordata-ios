@@ -12,23 +12,23 @@ import UIKit
  */
 class LightSensor: AbstractSensor, DeviceSensor {
     
-    private var device = UIDevice.currentDevice()
-    private var captureSession : AVCaptureSession?
-    private var captureDevice : AVCaptureDevice?
-    private let stillImageOutput = AVCaptureStillImageOutput()
-    private var intervalTimer: NSTimer?
+    fileprivate var device = UIDevice.current
+    fileprivate var captureSession : AVCaptureSession?
+    fileprivate var captureDevice : AVCaptureDevice?
+    fileprivate let stillImageOutput = AVCaptureStillImageOutput()
+    fileprivate var intervalTimer: Timer?
     
     /// A Bool that indicates that the camera on the back is available for video recording
     var isAvailable : Bool{
         
         get{
-            if UIDevice.currentDevice().isSimulator{
+            if UIDevice.current.isSimulator{
                 return false
             }
             
             for device in AVCaptureDevice.devices() {
-                if (device.hasMediaType(AVMediaTypeVideo)) {
-                    if(device.position == .Back) {
+                if ((device as AnyObject).hasMediaType(AVMediaTypeVideo)) {
+                    if((device as AnyObject).position == .back) {
                         return true
                     }
                 }
@@ -68,11 +68,11 @@ class LightSensor: AbstractSensor, DeviceSensor {
         captureSession = AVCaptureSession()
         captureSession?.sessionPreset = AVCaptureSessionPresetLow
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+        DispatchQueue.global(qos: .background).async {
             
             for device in AVCaptureDevice.devices() {
-                if (device.hasMediaType(AVMediaTypeVideo)) {
-                    if(device.position == .Back) {
+                if ((device as AnyObject).hasMediaType(AVMediaTypeVideo)) {
+                    if((device as AnyObject).position == .back) {
                         self.captureDevice = device as? AVCaptureDevice
                         if self.captureDevice != nil {
                             self.beginSession()
@@ -81,11 +81,11 @@ class LightSensor: AbstractSensor, DeviceSensor {
                     }
                 }
             }
-         });
+         }
     }
     
     //lock the camera for constant results
-    private func updateDeviceSettings(focusValue : Float, isoValue : Float) {
+    fileprivate func updateDeviceSettings(_ focusValue : Float, isoValue : Float) {
        
         if let device = captureDevice {
             
@@ -100,22 +100,22 @@ class LightSensor: AbstractSensor, DeviceSensor {
             let maxISO = device.activeFormat.maxISO
             let clampedISO = isoValue * (maxISO - minISO) + minISO
             
-            device.setExposureModeCustomWithDuration(AVCaptureExposureDurationCurrent, ISO: clampedISO, completionHandler: { (time) -> Void in
+            device.setExposureModeCustomWithDuration(AVCaptureExposureDurationCurrent, iso: clampedISO, completionHandler: { (time) -> Void in
                 //
             })
             device.unlockForConfiguration()
         }
     }
     
-    private func configureDevice() {
+    fileprivate func configureDevice() {
         if let device = captureDevice {
             try! device.lockForConfiguration()
-            device.focusMode = .Locked
+            device.focusMode = .locked
             device.unlockForConfiguration()
         }
     }
     
-    private func beginSession() {
+    fileprivate func beginSession() {
         
         configureDevice()
 
@@ -128,9 +128,9 @@ class LightSensor: AbstractSensor, DeviceSensor {
        
         captureSession?.startRunning()
 
-        intervalTimer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(self.intervalTimerFired), userInfo: nil, repeats: true)
-        NSRunLoop.currentRunLoop().addTimer(self.intervalTimer!, forMode: NSDefaultRunLoopMode)
-        NSRunLoop.currentRunLoop().run()
+        intervalTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.intervalTimerFired), userInfo: nil, repeats: true)
+        RunLoop.current.add(self.intervalTimer!, forMode: RunLoopMode.defaultRunLoopMode)
+        RunLoop.current.run()
     }
 
     
@@ -139,46 +139,46 @@ class LightSensor: AbstractSensor, DeviceSensor {
      */
     func intervalTimerFired(){
         
-        if let videoConnection = stillImageOutput.connectionWithMediaType(AVMediaTypeVideo) {
+        if let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo) {
 
-            self.stillImageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection) {
+            self.stillImageOutput.captureStillImageAsynchronously(from: videoConnection) {
                 (imageDataSampleBuffer, error) -> Void in
                 
                 guard imageDataSampleBuffer != nil else {return}
                 
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
-                let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
-                let image = UIImage(data: imageData)
+                DispatchQueue.global(qos: .background).async {
+                    let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
+                    let image = UIImage(data: imageData!)
+                    
+                    let cfData = image?.cgImage?.dataProvider?.data
+                    let pixels = CFDataGetBytePtr(cfData)
+                    
+                    let length = CFDataGetLength(cfData)
+                    var luminances = [Float]()
+                    
+                    for index in 0...length{
+                        let r = Float((pixels?[index])!)/255
+                        let g = Float((pixels?[index+1])!)/255
+                        let b = Float((pixels?[index+2])!)/255
                 
-                let cfData = CGDataProviderCopyData(CGImageGetDataProvider(image?.CGImage))
-                let pixels = CFDataGetBytePtr(cfData)
-                
-                let length = CFDataGetLength(cfData)
-                var luminances = [Float]()
-                
-                for index in 0...length{
-                    let r = Float(pixels[index])/255
-                    let g = Float(pixels[index+1])/255
-                    let b = Float(pixels[index+2])/255
-            
-                    let brightnes = (r + g + b) / 3
-                    luminances.append(brightnes)
-                }
-                
-                let averageBrightness = luminances.reduce(0, combine: +) / Float(luminances.count)
+                        let brightnes = (r + g + b) / 3
+                        luminances.append(brightnes)
+                    }
+                    
+                    let averageBrightness = luminances.reduce(0, +) / Float(luminances.count)
 
-                    self.persistData(averageBrightness)
-                })
+                        self.persistData(averageBrightness)
+                }
             }
         }
     }
     
-    private func persistData(brightnes: Float){
+    fileprivate func persistData(_ brightnes: Float){
         
         var params = [String:AnyObject]()
-        params["type"] = "Light"
-        params["date"] = dateFormatter.stringFromDate(NSDate())
-        params["brightnes"] = brightnes
+        params["type"] = "Light" as AnyObject?
+        params["date"] = dateFormatter.string(from: Date()) as AnyObject?
+        params["brightnes"] = brightnes as AnyObject?
         
         fileWriter?.addLine(params)
     }
