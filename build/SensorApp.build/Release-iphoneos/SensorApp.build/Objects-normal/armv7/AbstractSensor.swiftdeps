@@ -1,0 +1,204 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AbstractSensor"
+provides-nominal:
+- "C9SensorApp14AbstractSensor"
+provides-member:
+- ["C9SensorApp14AbstractSensor", ""]
+provides-dynamic-lookup:
+- "_isReporting"
+- "defaults"
+- "dateFormatter"
+- "isActive"
+- "isReporting"
+depends-top-level:
+- "BooleanLiteralType"
+- "Utils"
+- "SensorType"
+- "Bool"
+- "FileWriterService"
+- "NSObject"
+- "AbstractSensor"
+- "NSUserDefaults"
+depends-member:
+- ["C9SensorApp14AbstractSensor", "Bool"]
+- ["C9SensorApp14AbstractSensor", "FileWriterService"]
+- ["C9SensorApp14AbstractSensor", "NSUserDefaults"]
+- ["C9SensorApp14AbstractSensor", "SensorType"]
+- ["C9SensorApp14AbstractSensor", "Utils"]
+- ["C9SensorApp14AbstractSensor", "_isReporting"]
+- ["C9SensorApp14AbstractSensor", "dateFormatter"]
+- ["C9SensorApp14AbstractSensor", "defaults"]
+- ["C9SensorApp14AbstractSensor", "deinit"]
+- !private ["C9SensorApp14AbstractSensor", "deviceType"]
+- ["C9SensorApp14AbstractSensor", "fileWriter"]
+- ["C9SensorApp14AbstractSensor", "init"]
+- ["C9SensorApp14AbstractSensor", "isActive"]
+- ["C9SensorApp14AbstractSensor", "isReporting"]
+- ["Ps9AnyObject", "NSUserDefaults"]
+- ["Ps9AnyObject", "Utils"]
+- ["Ps9AnyObject", "_isReporting"]
+- !private ["Ps9AnyObject", "boolForKey"]
+- ["Ps9AnyObject", "dateFormatter"]
+- ["Ps9AnyObject", "defaults"]
+- ["Ps9AnyObject", "deviceType"]
+- ["Ps9AnyObject", "fileWriter"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isActive"]
+- ["Ps9AnyObject", "isReporting"]
+- !private ["Ps9AnyObject", "setBool"]
+- ["Ps9AnyObject", "standardUserDefaults"]
+- !private ["Ps9AnyObject", "synchronize"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "NSUserDefaults"]
+- ["Ps11CVarArgType", "Utils"]
+- ["Ps11CVarArgType", "_isReporting"]
+- !private ["Ps11CVarArgType", "boolForKey"]
+- ["Ps11CVarArgType", "dateFormatter"]
+- ["Ps11CVarArgType", "defaults"]
+- ["Ps11CVarArgType", "deviceType"]
+- ["Ps11CVarArgType", "fileWriter"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "isActive"]
+- ["Ps11CVarArgType", "isReporting"]
+- !private ["Ps11CVarArgType", "setBool"]
+- ["Ps11CVarArgType", "standardUserDefaults"]
+- !private ["Ps11CVarArgType", "synchronize"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "NSUserDefaults"]
+- ["Ps28CustomDebugStringConvertible", "Utils"]
+- ["Ps28CustomDebugStringConvertible", "_isReporting"]
+- !private ["Ps28CustomDebugStringConvertible", "boolForKey"]
+- ["Ps28CustomDebugStringConvertible", "dateFormatter"]
+- ["Ps28CustomDebugStringConvertible", "defaults"]
+- ["Ps28CustomDebugStringConvertible", "deviceType"]
+- ["Ps28CustomDebugStringConvertible", "fileWriter"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isActive"]
+- ["Ps28CustomDebugStringConvertible", "isReporting"]
+- !private ["Ps28CustomDebugStringConvertible", "setBool"]
+- ["Ps28CustomDebugStringConvertible", "standardUserDefaults"]
+- !private ["Ps28CustomDebugStringConvertible", "synchronize"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "NSUserDefaults"]
+- ["Ps23CustomStringConvertible", "Utils"]
+- ["Ps23CustomStringConvertible", "_isReporting"]
+- !private ["Ps23CustomStringConvertible", "boolForKey"]
+- ["Ps23CustomStringConvertible", "dateFormatter"]
+- ["Ps23CustomStringConvertible", "defaults"]
+- ["Ps23CustomStringConvertible", "deviceType"]
+- ["Ps23CustomStringConvertible", "fileWriter"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isActive"]
+- ["Ps23CustomStringConvertible", "isReporting"]
+- !private ["Ps23CustomStringConvertible", "setBool"]
+- ["Ps23CustomStringConvertible", "standardUserDefaults"]
+- !private ["Ps23CustomStringConvertible", "synchronize"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "Invalid"]
+- ["Ps9Equatable", "NSUserDefaults"]
+- ["Ps9Equatable", "Utils"]
+- ["Ps9Equatable", "_isReporting"]
+- !private ["Ps9Equatable", "boolForKey"]
+- ["Ps9Equatable", "dateFormatter"]
+- ["Ps9Equatable", "defaults"]
+- ["Ps9Equatable", "deviceType"]
+- ["Ps9Equatable", "fileWriter"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isActive"]
+- ["Ps9Equatable", "isReporting"]
+- !private ["Ps9Equatable", "rawValue"]
+- !private ["Ps9Equatable", "setBool"]
+- ["Ps9Equatable", "standardUserDefaults"]
+- !private ["Ps9Equatable", "synchronize"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "Invalid"]
+- ["Ps8Hashable", "NSUserDefaults"]
+- ["Ps8Hashable", "Utils"]
+- ["Ps8Hashable", "_isReporting"]
+- !private ["Ps8Hashable", "boolForKey"]
+- ["Ps8Hashable", "dateFormatter"]
+- ["Ps8Hashable", "defaults"]
+- ["Ps8Hashable", "deviceType"]
+- ["Ps8Hashable", "fileWriter"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isActive"]
+- ["Ps8Hashable", "isReporting"]
+- !private ["Ps8Hashable", "rawValue"]
+- !private ["Ps8Hashable", "setBool"]
+- ["Ps8Hashable", "standardUserDefaults"]
+- !private ["Ps8Hashable", "synchronize"]
+- ["Ps8Hashable", ""]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "FileWriterService"]
+- ["CSo8NSObject", "NSUserDefaults"]
+- ["CSo8NSObject", "SensorType"]
+- ["CSo8NSObject", "Utils"]
+- ["CSo8NSObject", "_isReporting"]
+- !private ["CSo8NSObject", "boolForKey"]
+- ["CSo8NSObject", "dateFormatter"]
+- ["CSo8NSObject", "defaults"]
+- ["CSo8NSObject", "deviceType"]
+- ["CSo8NSObject", "fileWriter"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isActive"]
+- ["CSo8NSObject", "isReporting"]
+- !private ["CSo8NSObject", "setBool"]
+- ["CSo8NSObject", "standardUserDefaults"]
+- !private ["CSo8NSObject", "synchronize"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "NSUserDefaults"]
+- ["PSo16NSObjectProtocol", "Utils"]
+- ["PSo16NSObjectProtocol", "_isReporting"]
+- !private ["PSo16NSObjectProtocol", "boolForKey"]
+- ["PSo16NSObjectProtocol", "dateFormatter"]
+- ["PSo16NSObjectProtocol", "defaults"]
+- ["PSo16NSObjectProtocol", "deviceType"]
+- ["PSo16NSObjectProtocol", "fileWriter"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "isActive"]
+- ["PSo16NSObjectProtocol", "isReporting"]
+- !private ["PSo16NSObjectProtocol", "setBool"]
+- ["PSo16NSObjectProtocol", "standardUserDefaults"]
+- !private ["PSo16NSObjectProtocol", "synchronize"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["CSo14NSUserDefaults", "boolForKey"]
+- !private ["CSo14NSUserDefaults", "setBool"]
+- ["CSo14NSUserDefaults", "standardUserDefaults"]
+- !private ["CSo14NSUserDefaults", "synchronize"]
+- ["Ps16RawRepresentable", "Invalid"]
+- !private ["Ps16RawRepresentable", "rawValue"]
+- ["O9SensorApp10SensorType", "Invalid"]
+- !private ["O9SensorApp10SensorType", "deinit"]
+- !private ["O9SensorApp10SensorType", "rawValue"]
+- ["C9SensorApp5Utils", "dateFormatter"]
+depends-nominal:
+- "C9SensorApp14AbstractSensor"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "CSo14NSUserDefaults"
+- "Ps16RawRepresentable"
+- "O9SensorApp10SensorType"
+- "C9SensorApp5Utils"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreBluetooth.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
+interface-hash: "8f2ddb6a7cfe391ce7576f0f7703fdef"

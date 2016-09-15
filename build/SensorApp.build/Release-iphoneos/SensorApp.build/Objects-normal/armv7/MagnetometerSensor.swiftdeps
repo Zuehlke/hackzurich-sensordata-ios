@@ -1,0 +1,435 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "MagnetometerSensor"
+provides-nominal:
+- "C9SensorApp18MagnetometerSensor"
+provides-member:
+- ["C9SensorApp18MagnetometerSensor", ""]
+provides-dynamic-lookup:
+- "stopReporting"
+- "startReporting"
+- "isAvailable"
+depends-top-level:
+- !private "NSError"
+- "DeviceSensor"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
+- "FileWriterService"
+- "SensorType"
+- !private "AnyObject"
+- "Bool"
+- !private "NSOperationQueue"
+- "AbstractSensor"
+- !private "print"
+- !private "String"
+- !private "CMMagnetometerData"
+- !private "NSDate"
+- !private "BooleanLiteralType"
+- "CMMotionManager"
+- "MagnetometerSensor"
+depends-member:
+- !private ["C9SensorApp19AbstractFileService", "addLine"]
+- !private ["C9SensorApp14AbstractSensor", "AnyObject"]
+- ["C9SensorApp14AbstractSensor", "Bool"]
+- !private ["C9SensorApp14AbstractSensor", "CMMagnetometerData"]
+- ["C9SensorApp14AbstractSensor", "CMMotionManager"]
+- ["C9SensorApp14AbstractSensor", "FileWriterService"]
+- !private ["C9SensorApp14AbstractSensor", "NSDate"]
+- !private ["C9SensorApp14AbstractSensor", "NSError"]
+- !private ["C9SensorApp14AbstractSensor", "NSOperationQueue"]
+- ["C9SensorApp14AbstractSensor", "SensorType"]
+- !private ["C9SensorApp14AbstractSensor", "String"]
+- !private ["C9SensorApp14AbstractSensor", "_isReporting"]
+- !private ["C9SensorApp14AbstractSensor", "dateFormatter"]
+- !private ["C9SensorApp14AbstractSensor", "fileWriter"]
+- ["C9SensorApp14AbstractSensor", "init"]
+- ["C9SensorApp14AbstractSensor", "isActive"]
+- ["C9SensorApp14AbstractSensor", "isAvailable"]
+- ["C9SensorApp14AbstractSensor", "isReporting"]
+- ["C9SensorApp14AbstractSensor", "manager"]
+- ["C9SensorApp14AbstractSensor", "persistData"]
+- !private ["C9SensorApp14AbstractSensor", "print"]
+- ["C9SensorApp14AbstractSensor", "startReporting"]
+- ["C9SensorApp14AbstractSensor", "stopReporting"]
+- ["C9SensorApp14AbstractSensor", "type"]
+- ["C9SensorApp14AbstractSensor", ""]
+- !private ["Ps9AnyObject", "AnyObject"]
+- !private ["Ps9AnyObject", "NSDate"]
+- !private ["Ps9AnyObject", "NSOperationQueue"]
+- !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "_isReporting"]
+- !private ["Ps9AnyObject", "addLine"]
+- !private ["Ps9AnyObject", "dateFormatter"]
+- !private ["Ps9AnyObject", "deinit"]
+- !private ["Ps9AnyObject", "fileWriter"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isActive"]
+- ["Ps9AnyObject", "isAvailable"]
+- ["Ps9AnyObject", "isReporting"]
+- !private ["Ps9AnyObject", "magneticField"]
+- !private ["Ps9AnyObject", "magnetometerAvailable"]
+- !private ["Ps9AnyObject", "magnetometerUpdateInterval"]
+- ["Ps9AnyObject", "manager"]
+- ["Ps9AnyObject", "persistData"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "startMagnetometerUpdatesToQueue"]
+- ["Ps9AnyObject", "startReporting"]
+- !private ["Ps9AnyObject", "stopMagnetometerUpdates"]
+- ["Ps9AnyObject", "stopReporting"]
+- !private ["Ps9AnyObject", "stringFromDate"]
+- ["Ps9AnyObject", "type"]
+- ["Ps9AnyObject", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["CSo9CMLogItem", "magneticField"]
+- !private ["VSC15CMMagneticField", "x"]
+- !private ["VSC15CMMagneticField", "y"]
+- !private ["VSC15CMMagneticField", "z"]
+- !private ["CSo18CMMagnetometerData", "magneticField"]
+- !private ["CSo15CMMotionManager", "magnetometerAvailable"]
+- !private ["CSo15CMMotionManager", "magnetometerUpdateInterval"]
+- !private ["CSo15CMMotionManager", "startMagnetometerUpdatesToQueue"]
+- !private ["CSo15CMMotionManager", "stopMagnetometerUpdates"]
+- !private ["Ps11CVarArgType", "AnyObject"]
+- !private ["Ps11CVarArgType", "NSDate"]
+- !private ["Ps11CVarArgType", "NSOperationQueue"]
+- !private ["Ps11CVarArgType", "String"]
+- !private ["Ps11CVarArgType", "_isReporting"]
+- !private ["Ps11CVarArgType", "dateFormatter"]
+- !private ["Ps11CVarArgType", "fileWriter"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "isActive"]
+- ["Ps11CVarArgType", "isAvailable"]
+- ["Ps11CVarArgType", "isReporting"]
+- !private ["Ps11CVarArgType", "magneticField"]
+- !private ["Ps11CVarArgType", "magnetometerAvailable"]
+- !private ["Ps11CVarArgType", "magnetometerUpdateInterval"]
+- ["Ps11CVarArgType", "manager"]
+- ["Ps11CVarArgType", "persistData"]
+- !private ["Ps11CVarArgType", "print"]
+- !private ["Ps11CVarArgType", "startMagnetometerUpdatesToQueue"]
+- ["Ps11CVarArgType", "startReporting"]
+- !private ["Ps11CVarArgType", "stopMagnetometerUpdates"]
+- ["Ps11CVarArgType", "stopReporting"]
+- !private ["Ps11CVarArgType", "stringFromDate"]
+- ["Ps11CVarArgType", "type"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "init"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "AnyObject"]
+- !private ["Ps28CustomDebugStringConvertible", "NSDate"]
+- !private ["Ps28CustomDebugStringConvertible", "NSOperationQueue"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "_isReporting"]
+- !private ["Ps28CustomDebugStringConvertible", "dateFormatter"]
+- !private ["Ps28CustomDebugStringConvertible", "fileWriter"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isActive"]
+- ["Ps28CustomDebugStringConvertible", "isAvailable"]
+- ["Ps28CustomDebugStringConvertible", "isReporting"]
+- !private ["Ps28CustomDebugStringConvertible", "magneticField"]
+- !private ["Ps28CustomDebugStringConvertible", "magnetometerAvailable"]
+- !private ["Ps28CustomDebugStringConvertible", "magnetometerUpdateInterval"]
+- ["Ps28CustomDebugStringConvertible", "manager"]
+- ["Ps28CustomDebugStringConvertible", "persistData"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- !private ["Ps28CustomDebugStringConvertible", "startMagnetometerUpdatesToQueue"]
+- ["Ps28CustomDebugStringConvertible", "startReporting"]
+- !private ["Ps28CustomDebugStringConvertible", "stopMagnetometerUpdates"]
+- ["Ps28CustomDebugStringConvertible", "stopReporting"]
+- !private ["Ps28CustomDebugStringConvertible", "stringFromDate"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- ["Ps28CustomDebugStringConvertible", "type"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "AnyObject"]
+- !private ["Ps23CustomStringConvertible", "NSDate"]
+- !private ["Ps23CustomStringConvertible", "NSOperationQueue"]
+- !private ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "_isReporting"]
+- !private ["Ps23CustomStringConvertible", "dateFormatter"]
+- !private ["Ps23CustomStringConvertible", "fileWriter"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isActive"]
+- ["Ps23CustomStringConvertible", "isAvailable"]
+- ["Ps23CustomStringConvertible", "isReporting"]
+- !private ["Ps23CustomStringConvertible", "magneticField"]
+- !private ["Ps23CustomStringConvertible", "magnetometerAvailable"]
+- !private ["Ps23CustomStringConvertible", "magnetometerUpdateInterval"]
+- ["Ps23CustomStringConvertible", "manager"]
+- ["Ps23CustomStringConvertible", "persistData"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- !private ["Ps23CustomStringConvertible", "startMagnetometerUpdatesToQueue"]
+- ["Ps23CustomStringConvertible", "startReporting"]
+- !private ["Ps23CustomStringConvertible", "stopMagnetometerUpdates"]
+- ["Ps23CustomStringConvertible", "stopReporting"]
+- !private ["Ps23CustomStringConvertible", "stringFromDate"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- ["Ps23CustomStringConvertible", "type"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["P9SensorApp12DeviceSensor", "AnyObject"]
+- !private ["P9SensorApp12DeviceSensor", "NSDate"]
+- !private ["P9SensorApp12DeviceSensor", "NSOperationQueue"]
+- !private ["P9SensorApp12DeviceSensor", "String"]
+- !private ["P9SensorApp12DeviceSensor", "_isReporting"]
+- !private ["P9SensorApp12DeviceSensor", "dateFormatter"]
+- !private ["P9SensorApp12DeviceSensor", "fileWriter"]
+- ["P9SensorApp12DeviceSensor", "isActive"]
+- ["P9SensorApp12DeviceSensor", "isAvailable"]
+- ["P9SensorApp12DeviceSensor", "isReporting"]
+- !private ["P9SensorApp12DeviceSensor", "manager"]
+- !private ["P9SensorApp12DeviceSensor", "persistData"]
+- !private ["P9SensorApp12DeviceSensor", "print"]
+- ["P9SensorApp12DeviceSensor", "startReporting"]
+- ["P9SensorApp12DeviceSensor", "stopReporting"]
+- ["P9SensorApp12DeviceSensor", "type"]
+- ["P9SensorApp12DeviceSensor", ""]
+- !private ["Vs10Dictionary", "init"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "init"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "AnyObject"]
+- !private ["Ps9Equatable", "Magnetometer"]
+- !private ["Ps9Equatable", "NSDate"]
+- !private ["Ps9Equatable", "NSOperationQueue"]
+- !private ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "_isReporting"]
+- !private ["Ps9Equatable", "dateFormatter"]
+- !private ["Ps9Equatable", "fileWriter"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isActive"]
+- ["Ps9Equatable", "isAvailable"]
+- ["Ps9Equatable", "isReporting"]
+- !private ["Ps9Equatable", "magneticField"]
+- !private ["Ps9Equatable", "magnetometerAvailable"]
+- !private ["Ps9Equatable", "magnetometerUpdateInterval"]
+- ["Ps9Equatable", "manager"]
+- ["Ps9Equatable", "persistData"]
+- !private ["Ps9Equatable", "print"]
+- !private ["Ps9Equatable", "startMagnetometerUpdatesToQueue"]
+- ["Ps9Equatable", "startReporting"]
+- !private ["Ps9Equatable", "stopMagnetometerUpdates"]
+- ["Ps9Equatable", "stopReporting"]
+- !private ["Ps9Equatable", "stringFromDate"]
+- ["Ps9Equatable", "type"]
+- ["Ps9Equatable", ""]
+- !private ["C9SensorApp17FileWriterService", "addLine"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "AnyObject"]
+- !private ["Ps8Hashable", "Magnetometer"]
+- !private ["Ps8Hashable", "NSDate"]
+- !private ["Ps8Hashable", "NSOperationQueue"]
+- !private ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "_isReporting"]
+- !private ["Ps8Hashable", "dateFormatter"]
+- !private ["Ps8Hashable", "fileWriter"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isActive"]
+- ["Ps8Hashable", "isAvailable"]
+- ["Ps8Hashable", "isReporting"]
+- !private ["Ps8Hashable", "magneticField"]
+- !private ["Ps8Hashable", "magnetometerAvailable"]
+- !private ["Ps8Hashable", "magnetometerUpdateInterval"]
+- ["Ps8Hashable", "manager"]
+- ["Ps8Hashable", "persistData"]
+- !private ["Ps8Hashable", "print"]
+- !private ["Ps8Hashable", "startMagnetometerUpdatesToQueue"]
+- ["Ps8Hashable", "startReporting"]
+- !private ["Ps8Hashable", "stopMagnetometerUpdates"]
+- ["Ps8Hashable", "stopReporting"]
+- !private ["Ps8Hashable", "stringFromDate"]
+- ["Ps8Hashable", "type"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["C9SensorApp18MagnetometerSensor", "AnyObject"]
+- ["C9SensorApp18MagnetometerSensor", "Bool"]
+- !private ["C9SensorApp18MagnetometerSensor", "CMMagnetometerData"]
+- ["C9SensorApp18MagnetometerSensor", "CMMotionManager"]
+- ["C9SensorApp18MagnetometerSensor", "FileWriterService"]
+- !private ["C9SensorApp18MagnetometerSensor", "NSDate"]
+- !private ["C9SensorApp18MagnetometerSensor", "NSError"]
+- !private ["C9SensorApp18MagnetometerSensor", "NSOperationQueue"]
+- ["C9SensorApp18MagnetometerSensor", "SensorType"]
+- !private ["C9SensorApp18MagnetometerSensor", "String"]
+- !private ["C9SensorApp18MagnetometerSensor", "_isReporting"]
+- !private ["C9SensorApp18MagnetometerSensor", "dateFormatter"]
+- ["C9SensorApp18MagnetometerSensor", "deinit"]
+- !private ["C9SensorApp18MagnetometerSensor", "fileWriter"]
+- ["C9SensorApp18MagnetometerSensor", "init"]
+- ["C9SensorApp18MagnetometerSensor", "isActive"]
+- ["C9SensorApp18MagnetometerSensor", "isAvailable"]
+- ["C9SensorApp18MagnetometerSensor", "isReporting"]
+- !private ["C9SensorApp18MagnetometerSensor", "manager"]
+- !private ["C9SensorApp18MagnetometerSensor", "persistData"]
+- !private ["C9SensorApp18MagnetometerSensor", "print"]
+- ["C9SensorApp18MagnetometerSensor", "startReporting"]
+- ["C9SensorApp18MagnetometerSensor", "stopReporting"]
+- ["C9SensorApp18MagnetometerSensor", "type"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "magneticField"]
+- !private ["PSo8NSCoding", "stringFromDate"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "magneticField"]
+- !private ["PSo9NSCopying", "stringFromDate"]
+- !private ["CSo6NSDate", "init"]
+- !private ["CSo15NSDateFormatter", "stringFromDate"]
+- !private ["CSo11NSFormatter", "stringFromDate"]
+- !private ["CSo8NSObject", "AnyObject"]
+- ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "CMMagnetometerData"]
+- ["CSo8NSObject", "CMMotionManager"]
+- ["CSo8NSObject", "FileWriterService"]
+- !private ["CSo8NSObject", "NSDate"]
+- !private ["CSo8NSObject", "NSError"]
+- !private ["CSo8NSObject", "NSOperationQueue"]
+- ["CSo8NSObject", "SensorType"]
+- !private ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "_isReporting"]
+- !private ["CSo8NSObject", "dateFormatter"]
+- !private ["CSo8NSObject", "fileWriter"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isActive"]
+- ["CSo8NSObject", "isAvailable"]
+- ["CSo8NSObject", "isReporting"]
+- !private ["CSo8NSObject", "magneticField"]
+- !private ["CSo8NSObject", "magnetometerAvailable"]
+- !private ["CSo8NSObject", "magnetometerUpdateInterval"]
+- ["CSo8NSObject", "manager"]
+- ["CSo8NSObject", "persistData"]
+- !private ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "startMagnetometerUpdatesToQueue"]
+- ["CSo8NSObject", "startReporting"]
+- !private ["CSo8NSObject", "stopMagnetometerUpdates"]
+- ["CSo8NSObject", "stopReporting"]
+- !private ["CSo8NSObject", "stringFromDate"]
+- ["CSo8NSObject", "type"]
+- !private ["PSo16NSObjectProtocol", "AnyObject"]
+- !private ["PSo16NSObjectProtocol", "NSDate"]
+- !private ["PSo16NSObjectProtocol", "NSOperationQueue"]
+- !private ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "_isReporting"]
+- !private ["PSo16NSObjectProtocol", "dateFormatter"]
+- !private ["PSo16NSObjectProtocol", "fileWriter"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "isActive"]
+- ["PSo16NSObjectProtocol", "isAvailable"]
+- ["PSo16NSObjectProtocol", "isReporting"]
+- !private ["PSo16NSObjectProtocol", "magneticField"]
+- !private ["PSo16NSObjectProtocol", "magnetometerAvailable"]
+- !private ["PSo16NSObjectProtocol", "magnetometerUpdateInterval"]
+- ["PSo16NSObjectProtocol", "manager"]
+- ["PSo16NSObjectProtocol", "persistData"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "startMagnetometerUpdatesToQueue"]
+- ["PSo16NSObjectProtocol", "startReporting"]
+- !private ["PSo16NSObjectProtocol", "stopMagnetometerUpdates"]
+- ["PSo16NSObjectProtocol", "stopReporting"]
+- !private ["PSo16NSObjectProtocol", "stringFromDate"]
+- ["PSo16NSObjectProtocol", "type"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["CSo16NSOperationQueue", "init"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "magneticField"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["Ps16RawRepresentable", "Magnetometer"]
+- !private ["O9SensorApp10SensorType", "Magnetometer"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "init"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Vs12StaticString", "deinit"]
+- !private ["SS", "deinit"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "subscript"]
+depends-nominal:
+- !private "C9SensorApp19AbstractFileService"
+- "C9SensorApp14AbstractSensor"
+- "Ps9AnyObject"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "CSo9CMLogItem"
+- !private "VSC15CMMagneticField"
+- !private "CSo18CMMagnetometerData"
+- !private "CSo15CMMotionManager"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "P9SensorApp12DeviceSensor"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "C9SensorApp17FileWriterService"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- "C9SensorApp18MagnetometerSensor"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo6NSDate"
+- !private "CSo15NSDateFormatter"
+- !private "CSo11NSFormatter"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "CSo16NSOperationQueue"
+- !private "PSo14NSSecureCoding"
+- "Ps21NilLiteralConvertible"
+- "Sq"
+- !private "Ps16RawRepresentable"
+- !private "O9SensorApp10SensorType"
+- !private "Ps12SequenceType"
+- !private "Vs5Slice"
+- !private "Vs12StaticString"
+- !private "SS"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreBluetooth.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
+interface-hash: "85687e90655d8ffb8980c26f689d24c9"

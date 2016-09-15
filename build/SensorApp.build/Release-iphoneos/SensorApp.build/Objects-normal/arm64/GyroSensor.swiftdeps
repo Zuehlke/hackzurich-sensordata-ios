@@ -1,0 +1,435 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GyroSensor"
+provides-nominal:
+- "C9SensorApp10GyroSensor"
+provides-member:
+- ["C9SensorApp10GyroSensor", ""]
+provides-dynamic-lookup:
+- "stopReporting"
+- "startReporting"
+- "isAvailable"
+depends-top-level:
+- "Bool"
+- !private "NSError"
+- !private "StringLiteralType"
+- !private "CMGyroData"
+- "DeviceSensor"
+- "AbstractSensor"
+- "CMMotionManager"
+- "SensorType"
+- !private "AnyObject"
+- !private "String"
+- !private "BooleanLiteralType"
+- !private "print"
+- "FileWriterService"
+- !private "UnicodeScalarType"
+- "GyroSensor"
+- !private "NSOperationQueue"
+- !private "NSDate"
+depends-member:
+- !private ["C9SensorApp19AbstractFileService", "addLine"]
+- !private ["C9SensorApp14AbstractSensor", "AnyObject"]
+- ["C9SensorApp14AbstractSensor", "Bool"]
+- !private ["C9SensorApp14AbstractSensor", "CMGyroData"]
+- ["C9SensorApp14AbstractSensor", "CMMotionManager"]
+- ["C9SensorApp14AbstractSensor", "FileWriterService"]
+- !private ["C9SensorApp14AbstractSensor", "NSDate"]
+- !private ["C9SensorApp14AbstractSensor", "NSError"]
+- !private ["C9SensorApp14AbstractSensor", "NSOperationQueue"]
+- ["C9SensorApp14AbstractSensor", "SensorType"]
+- !private ["C9SensorApp14AbstractSensor", "String"]
+- !private ["C9SensorApp14AbstractSensor", "_isReporting"]
+- !private ["C9SensorApp14AbstractSensor", "dateFormatter"]
+- !private ["C9SensorApp14AbstractSensor", "fileWriter"]
+- ["C9SensorApp14AbstractSensor", "init"]
+- ["C9SensorApp14AbstractSensor", "isActive"]
+- ["C9SensorApp14AbstractSensor", "isAvailable"]
+- ["C9SensorApp14AbstractSensor", "isReporting"]
+- ["C9SensorApp14AbstractSensor", "manager"]
+- ["C9SensorApp14AbstractSensor", "persistData"]
+- !private ["C9SensorApp14AbstractSensor", "print"]
+- ["C9SensorApp14AbstractSensor", "startReporting"]
+- ["C9SensorApp14AbstractSensor", "stopReporting"]
+- ["C9SensorApp14AbstractSensor", "type"]
+- ["C9SensorApp14AbstractSensor", ""]
+- !private ["Ps9AnyObject", "AnyObject"]
+- !private ["Ps9AnyObject", "NSDate"]
+- !private ["Ps9AnyObject", "NSOperationQueue"]
+- !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "_isReporting"]
+- !private ["Ps9AnyObject", "addLine"]
+- !private ["Ps9AnyObject", "dateFormatter"]
+- !private ["Ps9AnyObject", "deinit"]
+- !private ["Ps9AnyObject", "fileWriter"]
+- !private ["Ps9AnyObject", "gyroAvailable"]
+- !private ["Ps9AnyObject", "gyroUpdateInterval"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isActive"]
+- ["Ps9AnyObject", "isAvailable"]
+- ["Ps9AnyObject", "isReporting"]
+- ["Ps9AnyObject", "manager"]
+- ["Ps9AnyObject", "persistData"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "rotationRate"]
+- !private ["Ps9AnyObject", "startGyroUpdatesToQueue"]
+- ["Ps9AnyObject", "startReporting"]
+- !private ["Ps9AnyObject", "stopGyroUpdates"]
+- ["Ps9AnyObject", "stopReporting"]
+- !private ["Ps9AnyObject", "stringFromDate"]
+- ["Ps9AnyObject", "type"]
+- ["Ps9AnyObject", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["CSo10CMGyroData", "rotationRate"]
+- !private ["CSo9CMLogItem", "rotationRate"]
+- !private ["CSo15CMMotionManager", "gyroAvailable"]
+- !private ["CSo15CMMotionManager", "gyroUpdateInterval"]
+- !private ["CSo15CMMotionManager", "startGyroUpdatesToQueue"]
+- !private ["CSo15CMMotionManager", "stopGyroUpdates"]
+- !private ["VSC14CMRotationRate", "x"]
+- !private ["VSC14CMRotationRate", "y"]
+- !private ["VSC14CMRotationRate", "z"]
+- !private ["Ps11CVarArgType", "AnyObject"]
+- !private ["Ps11CVarArgType", "NSDate"]
+- !private ["Ps11CVarArgType", "NSOperationQueue"]
+- !private ["Ps11CVarArgType", "String"]
+- !private ["Ps11CVarArgType", "_isReporting"]
+- !private ["Ps11CVarArgType", "dateFormatter"]
+- !private ["Ps11CVarArgType", "fileWriter"]
+- !private ["Ps11CVarArgType", "gyroAvailable"]
+- !private ["Ps11CVarArgType", "gyroUpdateInterval"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "isActive"]
+- ["Ps11CVarArgType", "isAvailable"]
+- ["Ps11CVarArgType", "isReporting"]
+- ["Ps11CVarArgType", "manager"]
+- ["Ps11CVarArgType", "persistData"]
+- !private ["Ps11CVarArgType", "print"]
+- !private ["Ps11CVarArgType", "rotationRate"]
+- !private ["Ps11CVarArgType", "startGyroUpdatesToQueue"]
+- ["Ps11CVarArgType", "startReporting"]
+- !private ["Ps11CVarArgType", "stopGyroUpdates"]
+- ["Ps11CVarArgType", "stopReporting"]
+- !private ["Ps11CVarArgType", "stringFromDate"]
+- ["Ps11CVarArgType", "type"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "init"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "AnyObject"]
+- !private ["Ps28CustomDebugStringConvertible", "NSDate"]
+- !private ["Ps28CustomDebugStringConvertible", "NSOperationQueue"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "_isReporting"]
+- !private ["Ps28CustomDebugStringConvertible", "dateFormatter"]
+- !private ["Ps28CustomDebugStringConvertible", "fileWriter"]
+- !private ["Ps28CustomDebugStringConvertible", "gyroAvailable"]
+- !private ["Ps28CustomDebugStringConvertible", "gyroUpdateInterval"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isActive"]
+- ["Ps28CustomDebugStringConvertible", "isAvailable"]
+- ["Ps28CustomDebugStringConvertible", "isReporting"]
+- ["Ps28CustomDebugStringConvertible", "manager"]
+- ["Ps28CustomDebugStringConvertible", "persistData"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- !private ["Ps28CustomDebugStringConvertible", "rotationRate"]
+- !private ["Ps28CustomDebugStringConvertible", "startGyroUpdatesToQueue"]
+- ["Ps28CustomDebugStringConvertible", "startReporting"]
+- !private ["Ps28CustomDebugStringConvertible", "stopGyroUpdates"]
+- ["Ps28CustomDebugStringConvertible", "stopReporting"]
+- !private ["Ps28CustomDebugStringConvertible", "stringFromDate"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- ["Ps28CustomDebugStringConvertible", "type"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "AnyObject"]
+- !private ["Ps23CustomStringConvertible", "NSDate"]
+- !private ["Ps23CustomStringConvertible", "NSOperationQueue"]
+- !private ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "_isReporting"]
+- !private ["Ps23CustomStringConvertible", "dateFormatter"]
+- !private ["Ps23CustomStringConvertible", "fileWriter"]
+- !private ["Ps23CustomStringConvertible", "gyroAvailable"]
+- !private ["Ps23CustomStringConvertible", "gyroUpdateInterval"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isActive"]
+- ["Ps23CustomStringConvertible", "isAvailable"]
+- ["Ps23CustomStringConvertible", "isReporting"]
+- ["Ps23CustomStringConvertible", "manager"]
+- ["Ps23CustomStringConvertible", "persistData"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- !private ["Ps23CustomStringConvertible", "rotationRate"]
+- !private ["Ps23CustomStringConvertible", "startGyroUpdatesToQueue"]
+- ["Ps23CustomStringConvertible", "startReporting"]
+- !private ["Ps23CustomStringConvertible", "stopGyroUpdates"]
+- ["Ps23CustomStringConvertible", "stopReporting"]
+- !private ["Ps23CustomStringConvertible", "stringFromDate"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- ["Ps23CustomStringConvertible", "type"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["P9SensorApp12DeviceSensor", "AnyObject"]
+- !private ["P9SensorApp12DeviceSensor", "NSDate"]
+- !private ["P9SensorApp12DeviceSensor", "NSOperationQueue"]
+- !private ["P9SensorApp12DeviceSensor", "String"]
+- !private ["P9SensorApp12DeviceSensor", "_isReporting"]
+- !private ["P9SensorApp12DeviceSensor", "dateFormatter"]
+- !private ["P9SensorApp12DeviceSensor", "fileWriter"]
+- ["P9SensorApp12DeviceSensor", "isActive"]
+- ["P9SensorApp12DeviceSensor", "isAvailable"]
+- ["P9SensorApp12DeviceSensor", "isReporting"]
+- !private ["P9SensorApp12DeviceSensor", "manager"]
+- !private ["P9SensorApp12DeviceSensor", "persistData"]
+- !private ["P9SensorApp12DeviceSensor", "print"]
+- ["P9SensorApp12DeviceSensor", "startReporting"]
+- ["P9SensorApp12DeviceSensor", "stopReporting"]
+- ["P9SensorApp12DeviceSensor", "type"]
+- ["P9SensorApp12DeviceSensor", ""]
+- !private ["Vs10Dictionary", "init"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "init"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "AnyObject"]
+- !private ["Ps9Equatable", "Gyrometer"]
+- !private ["Ps9Equatable", "NSDate"]
+- !private ["Ps9Equatable", "NSOperationQueue"]
+- !private ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "_isReporting"]
+- !private ["Ps9Equatable", "dateFormatter"]
+- !private ["Ps9Equatable", "fileWriter"]
+- !private ["Ps9Equatable", "gyroAvailable"]
+- !private ["Ps9Equatable", "gyroUpdateInterval"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isActive"]
+- ["Ps9Equatable", "isAvailable"]
+- ["Ps9Equatable", "isReporting"]
+- ["Ps9Equatable", "manager"]
+- ["Ps9Equatable", "persistData"]
+- !private ["Ps9Equatable", "print"]
+- !private ["Ps9Equatable", "rotationRate"]
+- !private ["Ps9Equatable", "startGyroUpdatesToQueue"]
+- ["Ps9Equatable", "startReporting"]
+- !private ["Ps9Equatable", "stopGyroUpdates"]
+- ["Ps9Equatable", "stopReporting"]
+- !private ["Ps9Equatable", "stringFromDate"]
+- ["Ps9Equatable", "type"]
+- ["Ps9Equatable", ""]
+- !private ["C9SensorApp17FileWriterService", "addLine"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["C9SensorApp10GyroSensor", "AnyObject"]
+- ["C9SensorApp10GyroSensor", "Bool"]
+- !private ["C9SensorApp10GyroSensor", "CMGyroData"]
+- ["C9SensorApp10GyroSensor", "CMMotionManager"]
+- ["C9SensorApp10GyroSensor", "FileWriterService"]
+- !private ["C9SensorApp10GyroSensor", "NSDate"]
+- !private ["C9SensorApp10GyroSensor", "NSError"]
+- !private ["C9SensorApp10GyroSensor", "NSOperationQueue"]
+- ["C9SensorApp10GyroSensor", "SensorType"]
+- !private ["C9SensorApp10GyroSensor", "String"]
+- !private ["C9SensorApp10GyroSensor", "_isReporting"]
+- !private ["C9SensorApp10GyroSensor", "dateFormatter"]
+- ["C9SensorApp10GyroSensor", "deinit"]
+- !private ["C9SensorApp10GyroSensor", "fileWriter"]
+- ["C9SensorApp10GyroSensor", "init"]
+- ["C9SensorApp10GyroSensor", "isActive"]
+- ["C9SensorApp10GyroSensor", "isAvailable"]
+- ["C9SensorApp10GyroSensor", "isReporting"]
+- !private ["C9SensorApp10GyroSensor", "manager"]
+- !private ["C9SensorApp10GyroSensor", "persistData"]
+- !private ["C9SensorApp10GyroSensor", "print"]
+- ["C9SensorApp10GyroSensor", "startReporting"]
+- ["C9SensorApp10GyroSensor", "stopReporting"]
+- ["C9SensorApp10GyroSensor", "type"]
+- !private ["Ps8Hashable", "AnyObject"]
+- !private ["Ps8Hashable", "Gyrometer"]
+- !private ["Ps8Hashable", "NSDate"]
+- !private ["Ps8Hashable", "NSOperationQueue"]
+- !private ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "_isReporting"]
+- !private ["Ps8Hashable", "dateFormatter"]
+- !private ["Ps8Hashable", "fileWriter"]
+- !private ["Ps8Hashable", "gyroAvailable"]
+- !private ["Ps8Hashable", "gyroUpdateInterval"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isActive"]
+- ["Ps8Hashable", "isAvailable"]
+- ["Ps8Hashable", "isReporting"]
+- ["Ps8Hashable", "manager"]
+- ["Ps8Hashable", "persistData"]
+- !private ["Ps8Hashable", "print"]
+- !private ["Ps8Hashable", "rotationRate"]
+- !private ["Ps8Hashable", "startGyroUpdatesToQueue"]
+- ["Ps8Hashable", "startReporting"]
+- !private ["Ps8Hashable", "stopGyroUpdates"]
+- ["Ps8Hashable", "stopReporting"]
+- !private ["Ps8Hashable", "stringFromDate"]
+- ["Ps8Hashable", "type"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "rotationRate"]
+- !private ["PSo8NSCoding", "stringFromDate"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "rotationRate"]
+- !private ["PSo9NSCopying", "stringFromDate"]
+- !private ["CSo6NSDate", "init"]
+- !private ["CSo15NSDateFormatter", "stringFromDate"]
+- !private ["CSo11NSFormatter", "stringFromDate"]
+- !private ["CSo8NSObject", "AnyObject"]
+- ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "CMGyroData"]
+- ["CSo8NSObject", "CMMotionManager"]
+- ["CSo8NSObject", "FileWriterService"]
+- !private ["CSo8NSObject", "NSDate"]
+- !private ["CSo8NSObject", "NSError"]
+- !private ["CSo8NSObject", "NSOperationQueue"]
+- ["CSo8NSObject", "SensorType"]
+- !private ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "_isReporting"]
+- !private ["CSo8NSObject", "dateFormatter"]
+- !private ["CSo8NSObject", "fileWriter"]
+- !private ["CSo8NSObject", "gyroAvailable"]
+- !private ["CSo8NSObject", "gyroUpdateInterval"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isActive"]
+- ["CSo8NSObject", "isAvailable"]
+- ["CSo8NSObject", "isReporting"]
+- ["CSo8NSObject", "manager"]
+- ["CSo8NSObject", "persistData"]
+- !private ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "rotationRate"]
+- !private ["CSo8NSObject", "startGyroUpdatesToQueue"]
+- ["CSo8NSObject", "startReporting"]
+- !private ["CSo8NSObject", "stopGyroUpdates"]
+- ["CSo8NSObject", "stopReporting"]
+- !private ["CSo8NSObject", "stringFromDate"]
+- ["CSo8NSObject", "type"]
+- !private ["PSo16NSObjectProtocol", "AnyObject"]
+- !private ["PSo16NSObjectProtocol", "NSDate"]
+- !private ["PSo16NSObjectProtocol", "NSOperationQueue"]
+- !private ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "_isReporting"]
+- !private ["PSo16NSObjectProtocol", "dateFormatter"]
+- !private ["PSo16NSObjectProtocol", "fileWriter"]
+- !private ["PSo16NSObjectProtocol", "gyroAvailable"]
+- !private ["PSo16NSObjectProtocol", "gyroUpdateInterval"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "isActive"]
+- ["PSo16NSObjectProtocol", "isAvailable"]
+- ["PSo16NSObjectProtocol", "isReporting"]
+- ["PSo16NSObjectProtocol", "manager"]
+- ["PSo16NSObjectProtocol", "persistData"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "rotationRate"]
+- !private ["PSo16NSObjectProtocol", "startGyroUpdatesToQueue"]
+- ["PSo16NSObjectProtocol", "startReporting"]
+- !private ["PSo16NSObjectProtocol", "stopGyroUpdates"]
+- ["PSo16NSObjectProtocol", "stopReporting"]
+- !private ["PSo16NSObjectProtocol", "stringFromDate"]
+- ["PSo16NSObjectProtocol", "type"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["CSo16NSOperationQueue", "init"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "rotationRate"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["Ps16RawRepresentable", "Gyrometer"]
+- !private ["O9SensorApp10SensorType", "Gyrometer"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "init"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Vs12StaticString", "deinit"]
+- !private ["SS", "deinit"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "subscript"]
+depends-nominal:
+- !private "C9SensorApp19AbstractFileService"
+- "C9SensorApp14AbstractSensor"
+- "Ps9AnyObject"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "CSo10CMGyroData"
+- !private "CSo9CMLogItem"
+- !private "CSo15CMMotionManager"
+- !private "VSC14CMRotationRate"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "P9SensorApp12DeviceSensor"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "C9SensorApp17FileWriterService"
+- !private "Ps13GeneratorType"
+- "C9SensorApp10GyroSensor"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo6NSDate"
+- !private "CSo15NSDateFormatter"
+- !private "CSo11NSFormatter"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "CSo16NSOperationQueue"
+- !private "PSo14NSSecureCoding"
+- "Ps21NilLiteralConvertible"
+- "Sq"
+- !private "Ps16RawRepresentable"
+- !private "O9SensorApp10SensorType"
+- !private "Ps12SequenceType"
+- !private "Vs5Slice"
+- !private "Vs12StaticString"
+- !private "SS"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreBluetooth.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+interface-hash: "9a74fc494f43ea8ff75e38b6b82a47b2"

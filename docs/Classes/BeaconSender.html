@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BeaconSender Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/BeaconSender" class="dashAnchor"></a>
+    <a title="BeaconSender Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (84% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BeaconSender Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AbstractFileService.html">AbstractFileService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AbstractSensor.html">AbstractSensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AccelerometerSensor.html">AccelerometerSensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BarometerSensor.html">BarometerSensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BatteryLevelSensor.html">BatteryLevelSensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconSender.html">BeaconSender</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconSensor.html">BeaconSensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DeviceMotionSensor.html">DeviceMotionSensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ErrorCell.html">ErrorCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FileReaderService.html">FileReaderService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FileWriterService.html">FileWriterService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GyroSensor.html">GyroSensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LightSensor.html">LightSensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MagnetometerSensor.html">MagnetometerSensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MicrophoneSensor.html">MicrophoneSensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SenderModel.html">SenderModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensorCell.html">SensorCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensorModel.html">SensorModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensorTogglesViewController.html">SensorTogglesViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SettingCell.html">SettingCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SettingItem.html">SettingItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SettingModel.html">SettingModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TransferService.html">TransferService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Utils.html">Utils</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SenderType.html">SenderType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SensorType.html">SensorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SettingDescriptor.html">SettingDescriptor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UIDevice.html">UIDevice</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DeviceSender.html">DeviceSender</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DeviceSensor.html">DeviceSensor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BeaconSender</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">class</span> <span class="kt">BeaconSender</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="../Protocols/DeviceSender.html">DeviceSender</a></span><span class="p">,</span> <span class="kt">CBPeripheralManagerDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>The purpose of the <code>BeaconSender</code> class is to use the iPhone as an iBeacon
+The <code>BeaconSender</code> class conforms to the <code><a href="../Protocols/DeviceSender.html">DeviceSender</a></code> protocol.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SensorApp12BeaconSender11isAvailableSb"></a>
+                    <a name="//apple_ref/swift/Property/isAvailable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SensorApp12BeaconSender11isAvailableSb">isAvailable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Bool that indicates that beacon ranging is available on the device</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">isAvailable</span> <span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SensorApp12BeaconSender4typeOS_10SenderType"></a>
+                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SensorApp12BeaconSender4typeOS_10SenderType">type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Names the type of covered sender</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/SenderType.html">SenderType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SensorApp12BeaconSender11beaconMajorSi"></a>
+                    <a name="//apple_ref/swift/Property/beaconMajor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SensorApp12BeaconSender11beaconMajorSi">beaconMajor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a random Major number. And keep it during installation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">beaconMajor</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SensorApp12BeaconSender11beaconMinorSi"></a>
+                    <a name="//apple_ref/swift/Property/beaconMinor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SensorApp12BeaconSender11beaconMinorSi">beaconMinor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a random Minor number. And keep it during installation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">beaconMinor</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SensorApp12BeaconSender12startSendingFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/startSending()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SensorApp12BeaconSender12startSendingFT_T_">startSending()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method to start sending</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startSending</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SensorApp12BeaconSender11stopSendingFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/stopSending()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SensorApp12BeaconSender11stopSendingFT_T_">stopSending()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method to stop sending</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopSending</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SensorApp12BeaconSender31peripheralManagerDidUpdateStateFCSo19CBPeripheralManagerT_"></a>
+                    <a name="//apple_ref/swift/Method/peripheralManagerDidUpdateState(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SensorApp12BeaconSender31peripheralManagerDidUpdateStateFCSo19CBPeripheralManagerT_">peripheralManagerDidUpdateState(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>CBPeripheralManagerDelegate method: start and stop advertising based on state</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">peripheralManagerDidUpdateState</span><span class="p">(</span><span class="nv">peripheral</span><span class="p">:</span> <span class="kt">CBPeripheralManager</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SensorApp12BeaconSender36peripheralManagerDidStartAdvertisingFTCSo19CBPeripheralManager5errorGSqCSo7NSError__T_"></a>
+                    <a name="//apple_ref/swift/Method/peripheralManagerDidStartAdvertising(_:error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SensorApp12BeaconSender36peripheralManagerDidStartAdvertisingFTCSo19CBPeripheralManager5errorGSqCSo7NSError__T_">peripheralManagerDidStartAdvertising(_:error:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>CBPeripheralManagerDelegate method: printing feedback of advertising</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">peripheralManagerDidStartAdvertising</span><span class="p">(</span><span class="nv">peripheral</span><span class="p">:</span> <span class="kt">CBPeripheralManager</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Zühlke Engineering</a>. All rights reserved. (Last updated: 2016-09-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

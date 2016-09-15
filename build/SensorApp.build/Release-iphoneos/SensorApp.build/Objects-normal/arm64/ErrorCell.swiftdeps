@@ -1,0 +1,265 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ErrorCell"
+provides-nominal:
+- "C9SensorApp9ErrorCell"
+provides-member:
+- ["C9SensorApp9ErrorCell", ""]
+provides-dynamic-lookup:
+- "errorLabel"
+- "setDateOfLastError"
+- "cellIdentifier"
+depends-top-level:
+- "UITableViewCell"
+- "UILabel"
+- "NSDate"
+- "StringLiteralType"
+- "ErrorCell"
+- "Utils"
+depends-member:
+- ["Ps9AnyObject", "Utils"]
+- ["Ps9AnyObject", "cellIdentifier"]
+- ["Ps9AnyObject", "dateFormatter"]
+- ["Ps9AnyObject", "dateFormatterShort"]
+- ["Ps9AnyObject", "errorLabel"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "setDateOfLastError"]
+- !private ["Ps9AnyObject", "stringFromDate"]
+- !private ["Ps9AnyObject", "text"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "Utils"]
+- ["Ps11CVarArgType", "cellIdentifier"]
+- ["Ps11CVarArgType", "dateFormatter"]
+- ["Ps11CVarArgType", "errorLabel"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "setDateOfLastError"]
+- !private ["Ps11CVarArgType", "stringFromDate"]
+- !private ["Ps11CVarArgType", "text"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- ["Ps28CustomDebugStringConvertible", "Utils"]
+- ["Ps28CustomDebugStringConvertible", "cellIdentifier"]
+- ["Ps28CustomDebugStringConvertible", "dateFormatter"]
+- ["Ps28CustomDebugStringConvertible", "errorLabel"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "setDateOfLastError"]
+- !private ["Ps28CustomDebugStringConvertible", "stringFromDate"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "Utils"]
+- ["Ps23CustomStringConvertible", "cellIdentifier"]
+- ["Ps23CustomStringConvertible", "dateFormatter"]
+- ["Ps23CustomStringConvertible", "errorLabel"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "setDateOfLastError"]
+- !private ["Ps23CustomStringConvertible", "stringFromDate"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "Utils"]
+- ["Ps9Equatable", "cellIdentifier"]
+- ["Ps9Equatable", "dateFormatter"]
+- ["Ps9Equatable", "errorLabel"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "setDateOfLastError"]
+- !private ["Ps9Equatable", "stringFromDate"]
+- !private ["Ps9Equatable", "text"]
+- ["Ps9Equatable", ""]
+- ["C9SensorApp9ErrorCell", "NSDate"]
+- ["C9SensorApp9ErrorCell", "UILabel"]
+- ["C9SensorApp9ErrorCell", "Utils"]
+- ["C9SensorApp9ErrorCell", "cellIdentifier"]
+- !private ["C9SensorApp9ErrorCell", "dateFormatter"]
+- ["C9SensorApp9ErrorCell", "deinit"]
+- ["C9SensorApp9ErrorCell", "errorLabel"]
+- ["C9SensorApp9ErrorCell", "init"]
+- ["C9SensorApp9ErrorCell", "setDateOfLastError"]
+- ["Ps8Hashable", "Utils"]
+- ["Ps8Hashable", "cellIdentifier"]
+- ["Ps8Hashable", "dateFormatter"]
+- ["Ps8Hashable", "errorLabel"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "setDateOfLastError"]
+- !private ["Ps8Hashable", "stringFromDate"]
+- !private ["Ps8Hashable", "text"]
+- ["Ps8Hashable", ""]
+- ["PSo8NSCoding", "Utils"]
+- ["PSo8NSCoding", "cellIdentifier"]
+- ["PSo8NSCoding", "dateFormatter"]
+- ["PSo8NSCoding", "errorLabel"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "setDateOfLastError"]
+- !private ["PSo8NSCoding", "stringFromDate"]
+- !private ["PSo8NSCoding", "text"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "stringFromDate"]
+- !private ["CSo15NSDateFormatter", "stringFromDate"]
+- !private ["CSo11NSFormatter", "stringFromDate"]
+- ["CSo8NSObject", "NSDate"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "Utils"]
+- ["CSo8NSObject", "cellIdentifier"]
+- ["CSo8NSObject", "dateFormatter"]
+- ["CSo8NSObject", "errorLabel"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "setDateOfLastError"]
+- !private ["CSo8NSObject", "stringFromDate"]
+- !private ["CSo8NSObject", "text"]
+- ["PSo16NSObjectProtocol", "Utils"]
+- ["PSo16NSObjectProtocol", "cellIdentifier"]
+- ["PSo16NSObjectProtocol", "dateFormatter"]
+- ["PSo16NSObjectProtocol", "errorLabel"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "setDateOfLastError"]
+- !private ["PSo16NSObjectProtocol", "stringFromDate"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- ["PSo16NSObjectProtocol", ""]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- ["PSo29UIAccessibilityIdentification", "Utils"]
+- ["PSo29UIAccessibilityIdentification", "cellIdentifier"]
+- ["PSo29UIAccessibilityIdentification", "dateFormatter"]
+- ["PSo29UIAccessibilityIdentification", "errorLabel"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "setDateOfLastError"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- ["PSo12UIAppearance", "Utils"]
+- ["PSo12UIAppearance", "cellIdentifier"]
+- ["PSo12UIAppearance", "dateFormatter"]
+- ["PSo12UIAppearance", "errorLabel"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "setDateOfLastError"]
+- !private ["PSo12UIAppearance", "text"]
+- ["PSo12UIAppearance", ""]
+- ["PSo21UIAppearanceContainer", "Utils"]
+- ["PSo21UIAppearanceContainer", "cellIdentifier"]
+- ["PSo21UIAppearanceContainer", "dateFormatter"]
+- ["PSo21UIAppearanceContainer", "errorLabel"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "setDateOfLastError"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo17UICoordinateSpace", "Utils"]
+- ["PSo17UICoordinateSpace", "cellIdentifier"]
+- ["PSo17UICoordinateSpace", "dateFormatter"]
+- ["PSo17UICoordinateSpace", "errorLabel"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "setDateOfLastError"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- ["PSo17UICoordinateSpace", ""]
+- ["PSo13UIDynamicItem", "Utils"]
+- ["PSo13UIDynamicItem", "cellIdentifier"]
+- ["PSo13UIDynamicItem", "dateFormatter"]
+- ["PSo13UIDynamicItem", "errorLabel"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "setDateOfLastError"]
+- !private ["PSo13UIDynamicItem", "text"]
+- ["PSo13UIDynamicItem", ""]
+- ["PSo18UIFocusEnvironment", "Utils"]
+- ["PSo18UIFocusEnvironment", "cellIdentifier"]
+- ["PSo18UIFocusEnvironment", "dateFormatter"]
+- ["PSo18UIFocusEnvironment", "errorLabel"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "setDateOfLastError"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["PSo27UIGestureRecognizerDelegate", "Utils"]
+- ["PSo27UIGestureRecognizerDelegate", "cellIdentifier"]
+- ["PSo27UIGestureRecognizerDelegate", "dateFormatter"]
+- ["PSo27UIGestureRecognizerDelegate", "errorLabel"]
+- ["PSo27UIGestureRecognizerDelegate", "init"]
+- ["PSo27UIGestureRecognizerDelegate", "setDateOfLastError"]
+- ["PSo27UIGestureRecognizerDelegate", ""]
+- !private ["CSo7UILabel", "text"]
+- ["CSo11UIResponder", "NSDate"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "Utils"]
+- ["CSo11UIResponder", "cellIdentifier"]
+- ["CSo11UIResponder", "dateFormatter"]
+- ["CSo11UIResponder", "errorLabel"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "setDateOfLastError"]
+- !private ["CSo11UIResponder", "text"]
+- ["CSo15UITableViewCell", "NSDate"]
+- ["CSo15UITableViewCell", "UILabel"]
+- ["CSo15UITableViewCell", "Utils"]
+- ["CSo15UITableViewCell", "cellIdentifier"]
+- ["CSo15UITableViewCell", "dateFormatter"]
+- ["CSo15UITableViewCell", "errorLabel"]
+- ["CSo15UITableViewCell", "init"]
+- ["CSo15UITableViewCell", "setDateOfLastError"]
+- ["CSo15UITableViewCell", ""]
+- ["PSo18UITraitEnvironment", "Utils"]
+- ["PSo18UITraitEnvironment", "cellIdentifier"]
+- ["PSo18UITraitEnvironment", "dateFormatter"]
+- ["PSo18UITraitEnvironment", "errorLabel"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "setDateOfLastError"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "NSDate"]
+- ["CSo6UIView", "UILabel"]
+- ["CSo6UIView", "Utils"]
+- ["CSo6UIView", "cellIdentifier"]
+- ["CSo6UIView", "dateFormatter"]
+- ["CSo6UIView", "errorLabel"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", "setDateOfLastError"]
+- !private ["CSo6UIView", "text"]
+- ["C9SensorApp5Utils", "dateFormatterShort"]
+- ["Ps12_Reflectable", "Some"]
+- ["Ps12_Reflectable", "Utils"]
+- ["Ps12_Reflectable", "cellIdentifier"]
+- ["Ps12_Reflectable", "dateFormatter"]
+- ["Ps12_Reflectable", "errorLabel"]
+- ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "setDateOfLastError"]
+- !private ["Ps12_Reflectable", "text"]
+- ["Ps12_Reflectable", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "C9SensorApp9ErrorCell"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo15NSDateFormatter"
+- !private "CSo11NSFormatter"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "Ps21NilLiteralConvertible"
+- "Sq"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo27UIGestureRecognizerDelegate"
+- !private "CSo7UILabel"
+- "CSo11UIResponder"
+- "CSo15UITableViewCell"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- "C9SensorApp5Utils"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreBluetooth.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+interface-hash: "db1221ff9c087ad0c55c597d02bde95c"

@@ -1,0 +1,709 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BeaconSender"
+provides-nominal:
+- "C9SensorApp12BeaconSender"
+provides-member:
+- ["C9SensorApp12BeaconSender", ""]
+provides-dynamic-lookup:
+- "isAvailable"
+- "peripheralManagerDidUpdateState"
+- "beaconMinor"
+- "peripheralManagerDidStartAdvertising"
+- "stopSending"
+- "startSending"
+- "beaconMajor"
+depends-top-level:
+- !private "AnyObject"
+- !private "CLLocationManager"
+- !private "NSUUID"
+- !private "BooleanLiteralType"
+- !private "!="
+- "CLBeaconRegion"
+- "SenderType"
+- !private "CLBeaconMinorValue"
+- "Bool"
+- !private "print"
+- "Int"
+- !private "NSNumber"
+- "NSObject"
+- !private "String"
+- "BeaconSender"
+- !private "arc4random_uniform"
+- "NSDictionary"
+- "DeviceSender"
+- "CBPeripheralManager"
+- !private "StringLiteralType"
+- "CBPeripheralManagerDelegate"
+- !private "CLBeaconMajorValue"
+- !private "NSUserDefaults"
+- !private "UInt16"
+- !private "+"
+- !private "!"
+- !private "=="
+- !private "UIDevice"
+- "NSError"
+depends-member:
+- !private ["Ps9AnyObject", "CBPeripheralManager"]
+- !private ["Ps9AnyObject", "CLBeaconRegion"]
+- !private ["Ps9AnyObject", "CLLocationManager"]
+- !private ["Ps9AnyObject", "Int"]
+- !private ["Ps9AnyObject", "NSNumber"]
+- !private ["Ps9AnyObject", "NSUUID"]
+- !private ["Ps9AnyObject", "NSUserDefaults"]
+- !private ["Ps9AnyObject", "UIDevice"]
+- !private ["Ps9AnyObject", "UInt16"]
+- !private ["Ps9AnyObject", "UUIDString"]
+- !private ["Ps9AnyObject", "arc4random_uniform"]
+- ["Ps9AnyObject", "beaconMajor"]
+- ["Ps9AnyObject", "beaconMinor"]
+- ["Ps9AnyObject", "beaconPeripheralData"]
+- !private ["Ps9AnyObject", "currentDevice"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "integerForKey"]
+- ["Ps9AnyObject", "isAvailable"]
+- !private ["Ps9AnyObject", "isRangingAvailable"]
+- !private ["Ps9AnyObject", "isSimulator"]
+- ["Ps9AnyObject", "localBeacon"]
+- !private ["Ps9AnyObject", "localizedDescription"]
+- !private ["Ps9AnyObject", "major"]
+- !private ["Ps9AnyObject", "minor"]
+- !private ["Ps9AnyObject", "peripheralDataWithMeasuredPower"]
+- ["Ps9AnyObject", "peripheralManager"]
+- ["Ps9AnyObject", "peripheralManagerDidStartAdvertising"]
+- ["Ps9AnyObject", "peripheralManagerDidUpdateState"]
+- ["Ps9AnyObject", "peripheralManagerIsReadyToUpdateSubscribers"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "proximityUUID"]
+- !private ["Ps9AnyObject", "setValue"]
+- !private ["Ps9AnyObject", "standardUserDefaults"]
+- !private ["Ps9AnyObject", "startAdvertising"]
+- ["Ps9AnyObject", "startSending"]
+- !private ["Ps9AnyObject", "state"]
+- !private ["Ps9AnyObject", "stopAdvertising"]
+- ["Ps9AnyObject", "stopSending"]
+- !private ["Ps9AnyObject", "synchronize"]
+- ["Ps9AnyObject", "type"]
+- ["Ps9AnyObject", ""]
+- !private ["C9SensorApp12BeaconSender", "AnyObject"]
+- ["C9SensorApp12BeaconSender", "Bool"]
+- ["C9SensorApp12BeaconSender", "CBPeripheralManager"]
+- !private ["C9SensorApp12BeaconSender", "CLBeaconMajorValue"]
+- !private ["C9SensorApp12BeaconSender", "CLBeaconMinorValue"]
+- ["C9SensorApp12BeaconSender", "CLBeaconRegion"]
+- !private ["C9SensorApp12BeaconSender", "CLLocationManager"]
+- ["C9SensorApp12BeaconSender", "Int"]
+- ["C9SensorApp12BeaconSender", "NSDictionary"]
+- ["C9SensorApp12BeaconSender", "NSError"]
+- !private ["C9SensorApp12BeaconSender", "NSNumber"]
+- !private ["C9SensorApp12BeaconSender", "NSUUID"]
+- !private ["C9SensorApp12BeaconSender", "NSUserDefaults"]
+- ["C9SensorApp12BeaconSender", "SenderType"]
+- !private ["C9SensorApp12BeaconSender", "String"]
+- !private ["C9SensorApp12BeaconSender", "UIDevice"]
+- !private ["C9SensorApp12BeaconSender", "UInt16"]
+- !private ["C9SensorApp12BeaconSender", "arc4random_uniform"]
+- ["C9SensorApp12BeaconSender", "beaconMajor"]
+- ["C9SensorApp12BeaconSender", "beaconMinor"]
+- !private ["C9SensorApp12BeaconSender", "beaconPeripheralData"]
+- ["C9SensorApp12BeaconSender", "deinit"]
+- ["C9SensorApp12BeaconSender", "init"]
+- ["C9SensorApp12BeaconSender", "isAvailable"]
+- !private ["C9SensorApp12BeaconSender", "localBeacon"]
+- ["C9SensorApp12BeaconSender", "peripheralManager"]
+- ["C9SensorApp12BeaconSender", "peripheralManagerDidStartAdvertising"]
+- ["C9SensorApp12BeaconSender", "peripheralManagerDidUpdateState"]
+- ["C9SensorApp12BeaconSender", "peripheralManagerIsReadyToUpdateSubscribers"]
+- !private ["C9SensorApp12BeaconSender", "print"]
+- ["C9SensorApp12BeaconSender", "startSending"]
+- ["C9SensorApp12BeaconSender", "stopSending"]
+- ["C9SensorApp12BeaconSender", "type"]
+- !private ["Ps22BidirectionalIndexType", "init"]
+- !private ["Ps21BitwiseOperationsType", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "init"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["CSo19CBPeripheralManager", "init"]
+- !private ["CSo19CBPeripheralManager", "startAdvertising"]
+- !private ["CSo19CBPeripheralManager", "state"]
+- !private ["CSo19CBPeripheralManager", "stopAdvertising"]
+- !private ["PSo27CBPeripheralManagerDelegate", "CBPeripheralManager"]
+- !private ["PSo27CBPeripheralManagerDelegate", "CLBeaconRegion"]
+- !private ["PSo27CBPeripheralManagerDelegate", "CLLocationManager"]
+- !private ["PSo27CBPeripheralManagerDelegate", "Int"]
+- !private ["PSo27CBPeripheralManagerDelegate", "NSNumber"]
+- !private ["PSo27CBPeripheralManagerDelegate", "NSUUID"]
+- !private ["PSo27CBPeripheralManagerDelegate", "NSUserDefaults"]
+- !private ["PSo27CBPeripheralManagerDelegate", "UIDevice"]
+- !private ["PSo27CBPeripheralManagerDelegate", "UInt16"]
+- !private ["PSo27CBPeripheralManagerDelegate", "arc4random_uniform"]
+- !private ["PSo27CBPeripheralManagerDelegate", "beaconMajor"]
+- !private ["PSo27CBPeripheralManagerDelegate", "beaconMinor"]
+- !private ["PSo27CBPeripheralManagerDelegate", "beaconPeripheralData"]
+- ["PSo27CBPeripheralManagerDelegate", "isAvailable"]
+- !private ["PSo27CBPeripheralManagerDelegate", "localBeacon"]
+- ["PSo27CBPeripheralManagerDelegate", "peripheralManager"]
+- ["PSo27CBPeripheralManagerDelegate", "peripheralManagerDidStartAdvertising"]
+- ["PSo27CBPeripheralManagerDelegate", "peripheralManagerDidUpdateState"]
+- ["PSo27CBPeripheralManagerDelegate", "peripheralManagerIsReadyToUpdateSubscribers"]
+- !private ["PSo27CBPeripheralManagerDelegate", "print"]
+- ["PSo27CBPeripheralManagerDelegate", "startSending"]
+- ["PSo27CBPeripheralManagerDelegate", "stopSending"]
+- ["PSo27CBPeripheralManagerDelegate", "type"]
+- ["PSo27CBPeripheralManagerDelegate", ""]
+- !private ["OSC24CBPeripheralManagerState", "PoweredOff"]
+- !private ["OSC24CBPeripheralManagerState", "PoweredOn"]
+- !private ["OSC24CBPeripheralManagerState", "RawValue"]
+- !private ["OSC24CBPeripheralManagerState", "deinit"]
+- !private ["CSo14CLBeaconRegion", "deinit"]
+- !private ["CSo14CLBeaconRegion", "init"]
+- !private ["CSo14CLBeaconRegion", "major"]
+- !private ["CSo14CLBeaconRegion", "minor"]
+- !private ["CSo14CLBeaconRegion", "peripheralDataWithMeasuredPower"]
+- !private ["CSo14CLBeaconRegion", "proximityUUID"]
+- !private ["CSo17CLLocationManager", "isRangingAvailable"]
+- !private ["CSo8CLRegion", "deinit"]
+- !private ["CSo8CLRegion", "init"]
+- !private ["CSo8CLRegion", "major"]
+- !private ["CSo8CLRegion", "minor"]
+- !private ["CSo8CLRegion", "peripheralDataWithMeasuredPower"]
+- !private ["CSo8CLRegion", "proximityUUID"]
+- !private ["Ps11CVarArgType", "CBPeripheralManager"]
+- !private ["Ps11CVarArgType", "CLBeaconRegion"]
+- !private ["Ps11CVarArgType", "CLLocationManager"]
+- !private ["Ps11CVarArgType", "Int"]
+- !private ["Ps11CVarArgType", "NSNumber"]
+- !private ["Ps11CVarArgType", "NSUUID"]
+- !private ["Ps11CVarArgType", "NSUserDefaults"]
+- !private ["Ps11CVarArgType", "UIDevice"]
+- !private ["Ps11CVarArgType", "UInt16"]
+- !private ["Ps11CVarArgType", "UUIDString"]
+- !private ["Ps11CVarArgType", "arc4random_uniform"]
+- ["Ps11CVarArgType", "beaconMajor"]
+- ["Ps11CVarArgType", "beaconMinor"]
+- ["Ps11CVarArgType", "beaconPeripheralData"]
+- !private ["Ps11CVarArgType", "currentDevice"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "integerForKey"]
+- ["Ps11CVarArgType", "isAvailable"]
+- !private ["Ps11CVarArgType", "isRangingAvailable"]
+- !private ["Ps11CVarArgType", "isSimulator"]
+- ["Ps11CVarArgType", "localBeacon"]
+- !private ["Ps11CVarArgType", "localizedDescription"]
+- !private ["Ps11CVarArgType", "major"]
+- !private ["Ps11CVarArgType", "minor"]
+- !private ["Ps11CVarArgType", "peripheralDataWithMeasuredPower"]
+- ["Ps11CVarArgType", "peripheralManager"]
+- ["Ps11CVarArgType", "peripheralManagerDidStartAdvertising"]
+- ["Ps11CVarArgType", "peripheralManagerDidUpdateState"]
+- ["Ps11CVarArgType", "peripheralManagerIsReadyToUpdateSubscribers"]
+- !private ["Ps11CVarArgType", "print"]
+- !private ["Ps11CVarArgType", "proximityUUID"]
+- !private ["Ps11CVarArgType", "setValue"]
+- !private ["Ps11CVarArgType", "standardUserDefaults"]
+- !private ["Ps11CVarArgType", "startAdvertising"]
+- ["Ps11CVarArgType", "startSending"]
+- !private ["Ps11CVarArgType", "state"]
+- !private ["Ps11CVarArgType", "stopAdvertising"]
+- ["Ps11CVarArgType", "stopSending"]
+- !private ["Ps11CVarArgType", "synchronize"]
+- ["Ps11CVarArgType", "type"]
+- ["Ps11CVarArgType", ""]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "CBPeripheralManager"]
+- !private ["Ps28CustomDebugStringConvertible", "CLBeaconRegion"]
+- !private ["Ps28CustomDebugStringConvertible", "CLLocationManager"]
+- !private ["Ps28CustomDebugStringConvertible", "Int"]
+- !private ["Ps28CustomDebugStringConvertible", "NSNumber"]
+- !private ["Ps28CustomDebugStringConvertible", "NSUUID"]
+- !private ["Ps28CustomDebugStringConvertible", "NSUserDefaults"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "UIDevice"]
+- !private ["Ps28CustomDebugStringConvertible", "UInt16"]
+- !private ["Ps28CustomDebugStringConvertible", "UUIDString"]
+- !private ["Ps28CustomDebugStringConvertible", "arc4random_uniform"]
+- ["Ps28CustomDebugStringConvertible", "beaconMajor"]
+- ["Ps28CustomDebugStringConvertible", "beaconMinor"]
+- ["Ps28CustomDebugStringConvertible", "beaconPeripheralData"]
+- !private ["Ps28CustomDebugStringConvertible", "currentDevice"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "integerForKey"]
+- ["Ps28CustomDebugStringConvertible", "isAvailable"]
+- !private ["Ps28CustomDebugStringConvertible", "isRangingAvailable"]
+- !private ["Ps28CustomDebugStringConvertible", "isSimulator"]
+- ["Ps28CustomDebugStringConvertible", "localBeacon"]
+- !private ["Ps28CustomDebugStringConvertible", "localizedDescription"]
+- !private ["Ps28CustomDebugStringConvertible", "major"]
+- !private ["Ps28CustomDebugStringConvertible", "minor"]
+- !private ["Ps28CustomDebugStringConvertible", "peripheralDataWithMeasuredPower"]
+- ["Ps28CustomDebugStringConvertible", "peripheralManager"]
+- ["Ps28CustomDebugStringConvertible", "peripheralManagerDidStartAdvertising"]
+- ["Ps28CustomDebugStringConvertible", "peripheralManagerDidUpdateState"]
+- ["Ps28CustomDebugStringConvertible", "peripheralManagerIsReadyToUpdateSubscribers"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- !private ["Ps28CustomDebugStringConvertible", "proximityUUID"]
+- !private ["Ps28CustomDebugStringConvertible", "setValue"]
+- !private ["Ps28CustomDebugStringConvertible", "standardUserDefaults"]
+- !private ["Ps28CustomDebugStringConvertible", "startAdvertising"]
+- ["Ps28CustomDebugStringConvertible", "startSending"]
+- !private ["Ps28CustomDebugStringConvertible", "state"]
+- !private ["Ps28CustomDebugStringConvertible", "stopAdvertising"]
+- ["Ps28CustomDebugStringConvertible", "stopSending"]
+- !private ["Ps28CustomDebugStringConvertible", "synchronize"]
+- ["Ps28CustomDebugStringConvertible", "type"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "CBPeripheralManager"]
+- !private ["Ps23CustomStringConvertible", "CLBeaconRegion"]
+- !private ["Ps23CustomStringConvertible", "CLLocationManager"]
+- !private ["Ps23CustomStringConvertible", "Int"]
+- !private ["Ps23CustomStringConvertible", "NSNumber"]
+- !private ["Ps23CustomStringConvertible", "NSUUID"]
+- !private ["Ps23CustomStringConvertible", "NSUserDefaults"]
+- !private ["Ps23CustomStringConvertible", "UIDevice"]
+- !private ["Ps23CustomStringConvertible", "UInt16"]
+- !private ["Ps23CustomStringConvertible", "UUIDString"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "arc4random_uniform"]
+- ["Ps23CustomStringConvertible", "beaconMajor"]
+- ["Ps23CustomStringConvertible", "beaconMinor"]
+- ["Ps23CustomStringConvertible", "beaconPeripheralData"]
+- !private ["Ps23CustomStringConvertible", "currentDevice"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "integerForKey"]
+- ["Ps23CustomStringConvertible", "isAvailable"]
+- !private ["Ps23CustomStringConvertible", "isRangingAvailable"]
+- !private ["Ps23CustomStringConvertible", "isSimulator"]
+- ["Ps23CustomStringConvertible", "localBeacon"]
+- !private ["Ps23CustomStringConvertible", "localizedDescription"]
+- !private ["Ps23CustomStringConvertible", "major"]
+- !private ["Ps23CustomStringConvertible", "minor"]
+- !private ["Ps23CustomStringConvertible", "peripheralDataWithMeasuredPower"]
+- ["Ps23CustomStringConvertible", "peripheralManager"]
+- ["Ps23CustomStringConvertible", "peripheralManagerDidStartAdvertising"]
+- ["Ps23CustomStringConvertible", "peripheralManagerDidUpdateState"]
+- ["Ps23CustomStringConvertible", "peripheralManagerIsReadyToUpdateSubscribers"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- !private ["Ps23CustomStringConvertible", "proximityUUID"]
+- !private ["Ps23CustomStringConvertible", "setValue"]
+- !private ["Ps23CustomStringConvertible", "standardUserDefaults"]
+- !private ["Ps23CustomStringConvertible", "startAdvertising"]
+- ["Ps23CustomStringConvertible", "startSending"]
+- !private ["Ps23CustomStringConvertible", "state"]
+- !private ["Ps23CustomStringConvertible", "stopAdvertising"]
+- ["Ps23CustomStringConvertible", "stopSending"]
+- !private ["Ps23CustomStringConvertible", "synchronize"]
+- ["Ps23CustomStringConvertible", "type"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["P9SensorApp12DeviceSender", "CBPeripheralManager"]
+- !private ["P9SensorApp12DeviceSender", "CLBeaconRegion"]
+- !private ["P9SensorApp12DeviceSender", "CLLocationManager"]
+- !private ["P9SensorApp12DeviceSender", "Int"]
+- !private ["P9SensorApp12DeviceSender", "NSNumber"]
+- !private ["P9SensorApp12DeviceSender", "NSUUID"]
+- !private ["P9SensorApp12DeviceSender", "NSUserDefaults"]
+- !private ["P9SensorApp12DeviceSender", "UIDevice"]
+- !private ["P9SensorApp12DeviceSender", "UInt16"]
+- !private ["P9SensorApp12DeviceSender", "arc4random_uniform"]
+- !private ["P9SensorApp12DeviceSender", "beaconMajor"]
+- !private ["P9SensorApp12DeviceSender", "beaconMinor"]
+- !private ["P9SensorApp12DeviceSender", "beaconPeripheralData"]
+- ["P9SensorApp12DeviceSender", "isAvailable"]
+- !private ["P9SensorApp12DeviceSender", "localBeacon"]
+- ["P9SensorApp12DeviceSender", "peripheralManager"]
+- ["P9SensorApp12DeviceSender", "peripheralManagerDidStartAdvertising"]
+- ["P9SensorApp12DeviceSender", "peripheralManagerDidUpdateState"]
+- ["P9SensorApp12DeviceSender", "peripheralManagerIsReadyToUpdateSubscribers"]
+- !private ["P9SensorApp12DeviceSender", "print"]
+- ["P9SensorApp12DeviceSender", "startSending"]
+- ["P9SensorApp12DeviceSender", "stopSending"]
+- ["P9SensorApp12DeviceSender", "type"]
+- ["P9SensorApp12DeviceSender", ""]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "Beacon"]
+- !private ["Ps9Equatable", "CBPeripheralManager"]
+- !private ["Ps9Equatable", "CLBeaconRegion"]
+- !private ["Ps9Equatable", "CLLocationManager"]
+- !private ["Ps9Equatable", "Int"]
+- !private ["Ps9Equatable", "NSNumber"]
+- !private ["Ps9Equatable", "NSUUID"]
+- !private ["Ps9Equatable", "NSUserDefaults"]
+- !private ["Ps9Equatable", "PoweredOff"]
+- !private ["Ps9Equatable", "PoweredOn"]
+- !private ["Ps9Equatable", "RawValue"]
+- !private ["Ps9Equatable", "UIDevice"]
+- !private ["Ps9Equatable", "UInt16"]
+- !private ["Ps9Equatable", "UUIDString"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "arc4random_uniform"]
+- ["Ps9Equatable", "beaconMajor"]
+- ["Ps9Equatable", "beaconMinor"]
+- ["Ps9Equatable", "beaconPeripheralData"]
+- !private ["Ps9Equatable", "currentDevice"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "integerForKey"]
+- ["Ps9Equatable", "isAvailable"]
+- !private ["Ps9Equatable", "isRangingAvailable"]
+- !private ["Ps9Equatable", "isSimulator"]
+- ["Ps9Equatable", "localBeacon"]
+- !private ["Ps9Equatable", "localizedDescription"]
+- !private ["Ps9Equatable", "major"]
+- !private ["Ps9Equatable", "minor"]
+- !private ["Ps9Equatable", "peripheralDataWithMeasuredPower"]
+- ["Ps9Equatable", "peripheralManager"]
+- ["Ps9Equatable", "peripheralManagerDidStartAdvertising"]
+- ["Ps9Equatable", "peripheralManagerDidUpdateState"]
+- ["Ps9Equatable", "peripheralManagerIsReadyToUpdateSubscribers"]
+- !private ["Ps9Equatable", "print"]
+- !private ["Ps9Equatable", "proximityUUID"]
+- !private ["Ps9Equatable", "setValue"]
+- !private ["Ps9Equatable", "standardUserDefaults"]
+- !private ["Ps9Equatable", "startAdvertising"]
+- ["Ps9Equatable", "startSending"]
+- !private ["Ps9Equatable", "state"]
+- !private ["Ps9Equatable", "stopAdvertising"]
+- ["Ps9Equatable", "stopSending"]
+- !private ["Ps9Equatable", "synchronize"]
+- ["Ps9Equatable", "type"]
+- ["Ps9Equatable", ""]
+- !private ["Ps9ErrorType", "localizedDescription"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
+- !private ["Ps23FloatLiteralConvertible", "init"]
+- !private ["Ps16ForwardIndexType", "init"]
+- !private ["Ps8Hashable", "Beacon"]
+- !private ["Ps8Hashable", "CBPeripheralManager"]
+- !private ["Ps8Hashable", "CLBeaconRegion"]
+- !private ["Ps8Hashable", "CLLocationManager"]
+- !private ["Ps8Hashable", "Int"]
+- !private ["Ps8Hashable", "NSNumber"]
+- !private ["Ps8Hashable", "NSUUID"]
+- !private ["Ps8Hashable", "NSUserDefaults"]
+- !private ["Ps8Hashable", "PoweredOff"]
+- !private ["Ps8Hashable", "PoweredOn"]
+- !private ["Ps8Hashable", "RawValue"]
+- !private ["Ps8Hashable", "UIDevice"]
+- !private ["Ps8Hashable", "UInt16"]
+- !private ["Ps8Hashable", "UUIDString"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "arc4random_uniform"]
+- ["Ps8Hashable", "beaconMajor"]
+- ["Ps8Hashable", "beaconMinor"]
+- ["Ps8Hashable", "beaconPeripheralData"]
+- !private ["Ps8Hashable", "currentDevice"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "integerForKey"]
+- ["Ps8Hashable", "isAvailable"]
+- !private ["Ps8Hashable", "isRangingAvailable"]
+- !private ["Ps8Hashable", "isSimulator"]
+- ["Ps8Hashable", "localBeacon"]
+- !private ["Ps8Hashable", "localizedDescription"]
+- !private ["Ps8Hashable", "major"]
+- !private ["Ps8Hashable", "minor"]
+- !private ["Ps8Hashable", "peripheralDataWithMeasuredPower"]
+- ["Ps8Hashable", "peripheralManager"]
+- ["Ps8Hashable", "peripheralManagerDidStartAdvertising"]
+- ["Ps8Hashable", "peripheralManagerDidUpdateState"]
+- ["Ps8Hashable", "peripheralManagerIsReadyToUpdateSubscribers"]
+- !private ["Ps8Hashable", "print"]
+- !private ["Ps8Hashable", "proximityUUID"]
+- !private ["Ps8Hashable", "setValue"]
+- !private ["Ps8Hashable", "standardUserDefaults"]
+- !private ["Ps8Hashable", "startAdvertising"]
+- ["Ps8Hashable", "startSending"]
+- !private ["Ps8Hashable", "state"]
+- !private ["Ps8Hashable", "stopAdvertising"]
+- ["Ps8Hashable", "stopSending"]
+- !private ["Ps8Hashable", "synchronize"]
+- ["Ps8Hashable", "type"]
+- ["Ps8Hashable", ""]
+- !private ["SQ", "deinit"]
+- !private ["Si", "deinit"]
+- !private ["Si", "init"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps21IntegerArithmeticType", "init"]
+- !private ["Ps25IntegerLiteralConvertible", "init"]
+- !private ["Ps11IntegerType", "init"]
+- !private ["Ps14MirrorPathType", "init"]
+- !private ["PSo8NSCoding", "UUIDString"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "localizedDescription"]
+- !private ["PSo8NSCoding", "major"]
+- !private ["PSo8NSCoding", "minor"]
+- !private ["PSo8NSCoding", "peripheralDataWithMeasuredPower"]
+- !private ["PSo8NSCoding", "proximityUUID"]
+- !private ["PSo9NSCopying", "UUIDString"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "localizedDescription"]
+- !private ["PSo9NSCopying", "major"]
+- !private ["PSo9NSCopying", "minor"]
+- !private ["PSo9NSCopying", "peripheralDataWithMeasuredPower"]
+- !private ["PSo9NSCopying", "proximityUUID"]
+- !private ["CSo12NSDictionary", "deinit"]
+- !private ["CSo7NSError", "localizedDescription"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSNumber", "init"]
+- !private ["CSo8NSObject", "AnyObject"]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "CBPeripheralManager"]
+- !private ["CSo8NSObject", "CLBeaconMajorValue"]
+- !private ["CSo8NSObject", "CLBeaconMinorValue"]
+- ["CSo8NSObject", "CLBeaconRegion"]
+- !private ["CSo8NSObject", "CLLocationManager"]
+- ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "NSDictionary"]
+- ["CSo8NSObject", "NSError"]
+- !private ["CSo8NSObject", "NSNumber"]
+- !private ["CSo8NSObject", "NSUUID"]
+- !private ["CSo8NSObject", "NSUserDefaults"]
+- ["CSo8NSObject", "SenderType"]
+- !private ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "UIDevice"]
+- !private ["CSo8NSObject", "UInt16"]
+- !private ["CSo8NSObject", "UUIDString"]
+- !private ["CSo8NSObject", "arc4random_uniform"]
+- ["CSo8NSObject", "beaconMajor"]
+- ["CSo8NSObject", "beaconMinor"]
+- ["CSo8NSObject", "beaconPeripheralData"]
+- !private ["CSo8NSObject", "currentDevice"]
+- !private ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "integerForKey"]
+- ["CSo8NSObject", "isAvailable"]
+- !private ["CSo8NSObject", "isRangingAvailable"]
+- !private ["CSo8NSObject", "isSimulator"]
+- ["CSo8NSObject", "localBeacon"]
+- !private ["CSo8NSObject", "localizedDescription"]
+- !private ["CSo8NSObject", "major"]
+- !private ["CSo8NSObject", "minor"]
+- !private ["CSo8NSObject", "peripheralDataWithMeasuredPower"]
+- ["CSo8NSObject", "peripheralManager"]
+- ["CSo8NSObject", "peripheralManagerDidStartAdvertising"]
+- ["CSo8NSObject", "peripheralManagerDidUpdateState"]
+- ["CSo8NSObject", "peripheralManagerIsReadyToUpdateSubscribers"]
+- !private ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "proximityUUID"]
+- !private ["CSo8NSObject", "setValue"]
+- !private ["CSo8NSObject", "standardUserDefaults"]
+- !private ["CSo8NSObject", "startAdvertising"]
+- ["CSo8NSObject", "startSending"]
+- !private ["CSo8NSObject", "state"]
+- !private ["CSo8NSObject", "stopAdvertising"]
+- ["CSo8NSObject", "stopSending"]
+- !private ["CSo8NSObject", "synchronize"]
+- ["CSo8NSObject", "type"]
+- ["CSo8NSObject", ""]
+- !private ["PSo16NSObjectProtocol", "CBPeripheralManager"]
+- !private ["PSo16NSObjectProtocol", "CLBeaconRegion"]
+- !private ["PSo16NSObjectProtocol", "CLLocationManager"]
+- !private ["PSo16NSObjectProtocol", "Int"]
+- !private ["PSo16NSObjectProtocol", "NSNumber"]
+- !private ["PSo16NSObjectProtocol", "NSUUID"]
+- !private ["PSo16NSObjectProtocol", "NSUserDefaults"]
+- !private ["PSo16NSObjectProtocol", "UIDevice"]
+- !private ["PSo16NSObjectProtocol", "UInt16"]
+- !private ["PSo16NSObjectProtocol", "UUIDString"]
+- !private ["PSo16NSObjectProtocol", "arc4random_uniform"]
+- ["PSo16NSObjectProtocol", "beaconMajor"]
+- ["PSo16NSObjectProtocol", "beaconMinor"]
+- ["PSo16NSObjectProtocol", "beaconPeripheralData"]
+- !private ["PSo16NSObjectProtocol", "currentDevice"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "integerForKey"]
+- ["PSo16NSObjectProtocol", "isAvailable"]
+- !private ["PSo16NSObjectProtocol", "isRangingAvailable"]
+- !private ["PSo16NSObjectProtocol", "isSimulator"]
+- ["PSo16NSObjectProtocol", "localBeacon"]
+- !private ["PSo16NSObjectProtocol", "localizedDescription"]
+- !private ["PSo16NSObjectProtocol", "major"]
+- !private ["PSo16NSObjectProtocol", "minor"]
+- !private ["PSo16NSObjectProtocol", "peripheralDataWithMeasuredPower"]
+- ["PSo16NSObjectProtocol", "peripheralManager"]
+- ["PSo16NSObjectProtocol", "peripheralManagerDidStartAdvertising"]
+- ["PSo16NSObjectProtocol", "peripheralManagerDidUpdateState"]
+- ["PSo16NSObjectProtocol", "peripheralManagerIsReadyToUpdateSubscribers"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "proximityUUID"]
+- !private ["PSo16NSObjectProtocol", "setValue"]
+- !private ["PSo16NSObjectProtocol", "standardUserDefaults"]
+- !private ["PSo16NSObjectProtocol", "startAdvertising"]
+- ["PSo16NSObjectProtocol", "startSending"]
+- !private ["PSo16NSObjectProtocol", "state"]
+- !private ["PSo16NSObjectProtocol", "stopAdvertising"]
+- ["PSo16NSObjectProtocol", "stopSending"]
+- !private ["PSo16NSObjectProtocol", "synchronize"]
+- ["PSo16NSObjectProtocol", "type"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "UUIDString"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "localizedDescription"]
+- !private ["PSo14NSSecureCoding", "major"]
+- !private ["PSo14NSSecureCoding", "minor"]
+- !private ["PSo14NSSecureCoding", "peripheralDataWithMeasuredPower"]
+- !private ["PSo14NSSecureCoding", "proximityUUID"]
+- !private ["CSo8NSString", "deinit"]
+- !private ["CSo8NSString", "init"]
+- !private ["CSo6NSUUID", "UUIDString"]
+- !private ["CSo6NSUUID", "init"]
+- !private ["CSo14NSUserDefaults", "integerForKey"]
+- !private ["CSo14NSUserDefaults", "setValue"]
+- !private ["CSo14NSUserDefaults", "standardUserDefaults"]
+- !private ["CSo14NSUserDefaults", "synchronize"]
+- !private ["CSo7NSValue", "init"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "init"]
+- !private ["Ps21RandomAccessIndexType", "init"]
+- !private ["Ps16RawRepresentable", "Beacon"]
+- !private ["Ps16RawRepresentable", "PoweredOff"]
+- !private ["Ps16RawRepresentable", "PoweredOn"]
+- !private ["Ps16RawRepresentable", "RawValue"]
+- !private ["O9SensorApp10SenderType", "Beacon"]
+- !private ["Ps17SignedIntegerType", "init"]
+- !private ["Ps16SignedNumberType", "init"]
+- !private ["Ps10Streamable", "init"]
+- !private ["Ps10Strideable", "init"]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["CSo8UIDevice", "currentDevice"]
+- !private ["CSo8UIDevice", "isSimulator"]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt16", "init"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps19UnsignedIntegerType", "init"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps28_DisallowMixedSignArithmetic", "init"]
+- !private ["Ps14_Incrementable", "init"]
+- !private ["Ps22_IntegerArithmeticType", "init"]
+- !private ["Ps12_IntegerType", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "init"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps18_SignedIntegerType", "init"]
+- !private ["Ps18_StringElementType", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- "C9SensorApp12BeaconSender"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "CSo19CBPeripheralManager"
+- "PSo27CBPeripheralManagerDelegate"
+- !private "OSC24CBPeripheralManagerState"
+- !private "CSo14CLBeaconRegion"
+- !private "CSo17CLLocationManager"
+- !private "CSo8CLRegion"
+- "Ps11CVarArgType"
+- !private "Vs9Character"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "P9SensorApp12DeviceSender"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "Ps9ErrorType"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- !private "Ps23FloatLiteralConvertible"
+- !private "Ps16ForwardIndexType"
+- "Ps8Hashable"
+- !private "SQ"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo12NSDictionary"
+- !private "CSo7NSError"
+- !private "PSo16NSMutableCopying"
+- !private "CSo8NSNumber"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "CSo6NSUUID"
+- !private "CSo14NSUserDefaults"
+- !private "CSo7NSValue"
+- "Ps21NilLiteralConvertible"
+- "Sq"
+- !private "Ps16OutputStreamType"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps16RawRepresentable"
+- !private "O9SensorApp10SenderType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Streamable"
+- !private "Ps10Strideable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "CSo8UIDevice"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps19UnsignedIntegerType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps28_DisallowMixedSignArithmetic"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+- !private "Ps18_StringElementType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreBluetooth.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+interface-hash: "1fc991ceaadbe0639200f4b722bd6f15"
